@@ -1,0 +1,9 @@
+C:\Programming\it-career\PROJECT\AlbumRating\AlbumRating.ViewModels\bin\Debug\netcoreapp2.1\AlbumRating.ViewModels.deps.json
+C:\Programming\it-career\PROJECT\AlbumRating\AlbumRating.ViewModels\bin\Debug\netcoreapp2.1\AlbumRating.ViewModels.dll
+C:\Programming\it-career\PROJECT\AlbumRating\AlbumRating.ViewModels\bin\Debug\netcoreapp2.1\AlbumRating.ViewModels.pdb
+C:\Programming\it-career\PROJECT\AlbumRating\AlbumRating.ViewModels\obj\Debug\netcoreapp2.1\AlbumRating.ViewModels.csprojAssemblyReference.cache
+C:\Programming\it-career\PROJECT\AlbumRating\AlbumRating.ViewModels\obj\Debug\netcoreapp2.1\AlbumRating.ViewModels.csproj.CoreCompileInputs.cache
+C:\Programming\it-career\PROJECT\AlbumRating\AlbumRating.ViewModels\obj\Debug\netcoreapp2.1\AlbumRating.ViewModels.AssemblyInfoInputs.cache
+C:\Programming\it-career\PROJECT\AlbumRating\AlbumRating.ViewModels\obj\Debug\netcoreapp2.1\AlbumRating.ViewModels.AssemblyInfo.cs
+C:\Programming\it-career\PROJECT\AlbumRating\AlbumRating.ViewModels\obj\Debug\netcoreapp2.1\AlbumRating.ViewModels.dll
+C:\Programming\it-career\PROJECT\AlbumRating\AlbumRating.ViewModels\obj\Debug\netcoreapp2.1\AlbumRating.ViewModels.pdb

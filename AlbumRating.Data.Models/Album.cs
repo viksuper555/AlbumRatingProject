@@ -1,0 +1,31 @@
+﻿using System;
+using System.Collections.Generic;
+
+namespace AlbumRating.Data.Models
+{
+    public class Album
+    {
+        public Album()
+        {
+            this.UserRatedAlbums = new List<UserRatedAlbum>();
+        }
+
+        public int AlbumId { get; set; }
+
+        public string Artist { get; set; }
+
+        public int Year { get; set; }
+
+        public string Genre { get; set; }
+
+        public string Title { get; set; }
+
+        public ICollection<UserRatedAlbum> UserRatedAlbums { get; set; }
+
+        public override string ToString()
+        {
+            return $"{this.Artist} {this.Title}";
+        }
+
+    }
+}

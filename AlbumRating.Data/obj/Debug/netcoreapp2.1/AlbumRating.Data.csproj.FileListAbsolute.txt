@@ -1,0 +1,14 @@
+C:\Programming\it-career\PROJECT\AlbumRating\AlbumRating.Data\bin\Debug\netcoreapp2.1\AlbumRating.Data.deps.json
+C:\Programming\it-career\PROJECT\AlbumRating\AlbumRating.Data\bin\Debug\netcoreapp2.1\AlbumRating.Data.dll
+C:\Programming\it-career\PROJECT\AlbumRating\AlbumRating.Data\obj\Debug\netcoreapp2.1\AlbumRating.Data.csprojAssemblyReference.cache
+C:\Programming\it-career\PROJECT\AlbumRating\AlbumRating.Data\obj\Debug\netcoreapp2.1\AlbumRating.Data.csproj.CoreCompileInputs.cache
+C:\Programming\it-career\PROJECT\AlbumRating\AlbumRating.Data\obj\Debug\netcoreapp2.1\AlbumRating.Data.AssemblyInfoInputs.cache
+C:\Programming\it-career\PROJECT\AlbumRating\AlbumRating.Data\obj\Debug\netcoreapp2.1\AlbumRating.Data.AssemblyInfo.cs
+C:\Programming\it-career\PROJECT\AlbumRating\AlbumRating.Data\bin\Debug\netcoreapp2.1\AlbumRating.Data.pdb
+C:\Programming\it-career\PROJECT\AlbumRating\AlbumRating.Data\bin\Debug\netcoreapp2.1\AlbumRating.Data.Models.dll
+C:\Programming\it-career\PROJECT\AlbumRating\AlbumRating.Data\bin\Debug\netcoreapp2.1\AlbumRating.Data.Models.pdb
+C:\Programming\it-career\PROJECT\AlbumRating\AlbumRating.Data\obj\Debug\netcoreapp2.1\AlbumRating.Data.csproj.CopyComplete
+C:\Programming\it-career\PROJECT\AlbumRating\AlbumRating.Data\obj\Debug\netcoreapp2.1\AlbumRating.Data.dll
+C:\Programming\it-career\PROJECT\AlbumRating\AlbumRating.Data\obj\Debug\netcoreapp2.1\AlbumRating.Data.pdb
+C:\Programming\it-career\PROJECT\AlbumRating\AlbumRating.Data\bin\Debug\netcoreapp2.1\AlbumRating.Data.runtimeconfig.json
+C:\Programming\it-career\PROJECT\AlbumRating\AlbumRating.Data\bin\Debug\netcoreapp2.1\AlbumRating.Data.runtimeconfig.dev.json
