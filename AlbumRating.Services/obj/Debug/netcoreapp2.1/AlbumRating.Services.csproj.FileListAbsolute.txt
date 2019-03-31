@@ -16,3 +16,8 @@ C:\Users\viksu\Desktop\AlbumRatingProject\AlbumRating.Services\obj\Debug\netcore
 C:\Users\viksu\Desktop\AlbumRatingProject\AlbumRating.Services\obj\Debug\netcoreapp2.1\AlbumRating.Services.AssemblyInfo.cs
 C:\Users\viksu\Desktop\AlbumRatingProject\AlbumRating.Services\obj\Debug\netcoreapp2.1\AlbumRating.Services.dll
 C:\Users\viksu\Desktop\AlbumRatingProject\AlbumRating.Services\obj\Debug\netcoreapp2.1\AlbumRating.Services.pdb
+C:\Users\viksu\Desktop\AlbumRatingProject\AlbumRating.Services\bin\Debug\netcoreapp2.1\AlbumRating.Data.dll
+C:\Users\viksu\Desktop\AlbumRatingProject\AlbumRating.Services\bin\Debug\netcoreapp2.1\AlbumRating.Data.Models.dll
+C:\Users\viksu\Desktop\AlbumRatingProject\AlbumRating.Services\bin\Debug\netcoreapp2.1\AlbumRating.Data.Models.pdb
+C:\Users\viksu\Desktop\AlbumRatingProject\AlbumRating.Services\bin\Debug\netcoreapp2.1\AlbumRating.Data.pdb
+C:\Users\viksu\Desktop\AlbumRatingProject\AlbumRating.Services\obj\Debug\netcoreapp2.1\AlbumRating.Services.csproj.CopyComplete

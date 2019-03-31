@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AlbumRating.Data;
+using AlbumRating.Services;
+using AlbumRating.Services.Contracts;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -37,6 +39,8 @@ namespace AlbumRating
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             //services.AddDbContext<AlbumRatingDbContext>(options => options.UseSqlServer(ConfigurationData.ConnectionString));
             services.AddDbContext<AlbumRatingDbContext>(o => o.UseSqlServer(Connection.CONNECTION_STRING));
+
+            services.AddScoped<IAlbumsService, AlbumsService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
