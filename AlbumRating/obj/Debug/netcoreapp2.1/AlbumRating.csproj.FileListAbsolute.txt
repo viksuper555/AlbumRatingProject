@@ -116,3 +116,4 @@ C:\Programming\it-career\KOLEVGEI\AlbumRatingProject\AlbumRating\obj\Debug\netco
 C:\Programming\it-career\KOLEVGEI\AlbumRatingProject\AlbumRating\obj\Debug\netcoreapp2.1\AlbumRating.dll
 C:\Programming\it-career\KOLEVGEI\AlbumRatingProject\AlbumRating\obj\Debug\netcoreapp2.1\AlbumRating.pdb
 C:\Programming\it-career\KOLEVGEI\AlbumRatingProject\AlbumRating\obj\Debug\netcoreapp2.1\Razor\Views\Album\Create.g.cshtml.cs
+C:\Programming\it-career\KOLEVGEI\AlbumRatingProject\AlbumRating\obj\Debug\netcoreapp2.1\Razor\Views\Album\Delete.g.cshtml.cs

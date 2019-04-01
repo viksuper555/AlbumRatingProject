@@ -4,8 +4,6 @@ namespace AlbumRating.ViewModels.Models
 {
     public class CreateAlbumViewModel
     {
-        public int AlbumId { get; set; }
-
         public string Artist { get; set; }
 
         public int Year { get; set; }
