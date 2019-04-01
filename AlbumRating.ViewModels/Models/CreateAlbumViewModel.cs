@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace AlbumRating.ViewModels
+namespace AlbumRating.ViewModels.Models
 {
     public class CreateAlbumViewModel
     {

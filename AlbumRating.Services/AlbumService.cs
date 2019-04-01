@@ -5,15 +5,15 @@ using System;
 
 namespace AlbumRating.Services
 {
-    public class AlbumsService : IAlbumsService
+    public class AlbumService : IAlbumsService
     {
         private AlbumRatingDbContext context;
 
-        public AlbumsService(AlbumRatingDbContext context)
+        public AlbumService(AlbumRatingDbContext context)
         {
             this.context = context;
         }
-        public int CreateAlbum(int albumId, string title, string artist, int year, string genre)
+        public int CreateAlbum(int albumId, string title, string artist, int year, string genre) 
         {
             var album = new Album() { AlbumId= albumId, Title = title, Artist = artist, Year = year, Genre = genre };
             context.Albums.Add(album);

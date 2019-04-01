@@ -16,3 +16,12 @@ C:\Users\viksu\Desktop\AlbumRatingProject\AlbumRating.ViewModels\obj\Debug\netco
 C:\Users\viksu\Desktop\AlbumRatingProject\AlbumRating.ViewModels\obj\Debug\netcoreapp2.1\AlbumRating.ViewModels.AssemblyInfo.cs
 C:\Users\viksu\Desktop\AlbumRatingProject\AlbumRating.ViewModels\obj\Debug\netcoreapp2.1\AlbumRating.ViewModels.dll
 C:\Users\viksu\Desktop\AlbumRatingProject\AlbumRating.ViewModels\obj\Debug\netcoreapp2.1\AlbumRating.ViewModels.pdb
+C:\Programming\it-career\KOLEVGEI\AlbumRatingProject\AlbumRating.ViewModels\bin\Debug\netcoreapp2.1\AlbumRating.ViewModels.deps.json
+C:\Programming\it-career\KOLEVGEI\AlbumRatingProject\AlbumRating.ViewModels\bin\Debug\netcoreapp2.1\AlbumRating.ViewModels.dll
+C:\Programming\it-career\KOLEVGEI\AlbumRatingProject\AlbumRating.ViewModels\bin\Debug\netcoreapp2.1\AlbumRating.ViewModels.pdb
+C:\Programming\it-career\KOLEVGEI\AlbumRatingProject\AlbumRating.ViewModels\obj\Debug\netcoreapp2.1\AlbumRating.ViewModels.csprojAssemblyReference.cache
+C:\Programming\it-career\KOLEVGEI\AlbumRatingProject\AlbumRating.ViewModels\obj\Debug\netcoreapp2.1\AlbumRating.ViewModels.csproj.CoreCompileInputs.cache
+C:\Programming\it-career\KOLEVGEI\AlbumRatingProject\AlbumRating.ViewModels\obj\Debug\netcoreapp2.1\AlbumRating.ViewModels.AssemblyInfoInputs.cache
+C:\Programming\it-career\KOLEVGEI\AlbumRatingProject\AlbumRating.ViewModels\obj\Debug\netcoreapp2.1\AlbumRating.ViewModels.AssemblyInfo.cs
+C:\Programming\it-career\KOLEVGEI\AlbumRatingProject\AlbumRating.ViewModels\obj\Debug\netcoreapp2.1\AlbumRating.ViewModels.dll
+C:\Programming\it-career\KOLEVGEI\AlbumRatingProject\AlbumRating.ViewModels\obj\Debug\netcoreapp2.1\AlbumRating.ViewModels.pdb

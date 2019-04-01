@@ -40,7 +40,7 @@ namespace AlbumRating
             //services.AddDbContext<AlbumRatingDbContext>(options => options.UseSqlServer(ConfigurationData.ConnectionString));
             services.AddDbContext<AlbumRatingDbContext>(o => o.UseSqlServer(Connection.CONNECTION_STRING));
 
-            services.AddScoped<IAlbumsService, AlbumsService>();
+            services.AddScoped<IAlbumsService, AlbumService>(); //
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

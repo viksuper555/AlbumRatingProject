@@ -21,3 +21,17 @@ C:\Users\viksu\Desktop\AlbumRatingProject\AlbumRating.Services\bin\Debug\netcore
 C:\Users\viksu\Desktop\AlbumRatingProject\AlbumRating.Services\bin\Debug\netcoreapp2.1\AlbumRating.Data.Models.pdb
 C:\Users\viksu\Desktop\AlbumRatingProject\AlbumRating.Services\bin\Debug\netcoreapp2.1\AlbumRating.Data.pdb
 C:\Users\viksu\Desktop\AlbumRatingProject\AlbumRating.Services\obj\Debug\netcoreapp2.1\AlbumRating.Services.csproj.CopyComplete
+C:\Programming\it-career\KOLEVGEI\AlbumRatingProject\AlbumRating.Services\bin\Debug\netcoreapp2.1\AlbumRating.Services.deps.json
+C:\Programming\it-career\KOLEVGEI\AlbumRatingProject\AlbumRating.Services\bin\Debug\netcoreapp2.1\AlbumRating.Services.dll
+C:\Programming\it-career\KOLEVGEI\AlbumRatingProject\AlbumRating.Services\bin\Debug\netcoreapp2.1\AlbumRating.Services.pdb
+C:\Programming\it-career\KOLEVGEI\AlbumRatingProject\AlbumRating.Services\bin\Debug\netcoreapp2.1\AlbumRating.Data.dll
+C:\Programming\it-career\KOLEVGEI\AlbumRatingProject\AlbumRating.Services\bin\Debug\netcoreapp2.1\AlbumRating.Data.Models.dll
+C:\Programming\it-career\KOLEVGEI\AlbumRatingProject\AlbumRating.Services\bin\Debug\netcoreapp2.1\AlbumRating.Data.Models.pdb
+C:\Programming\it-career\KOLEVGEI\AlbumRatingProject\AlbumRating.Services\bin\Debug\netcoreapp2.1\AlbumRating.Data.pdb
+C:\Programming\it-career\KOLEVGEI\AlbumRatingProject\AlbumRating.Services\obj\Debug\netcoreapp2.1\AlbumRating.Services.csprojAssemblyReference.cache
+C:\Programming\it-career\KOLEVGEI\AlbumRatingProject\AlbumRating.Services\obj\Debug\netcoreapp2.1\AlbumRating.Services.csproj.CoreCompileInputs.cache
+C:\Programming\it-career\KOLEVGEI\AlbumRatingProject\AlbumRating.Services\obj\Debug\netcoreapp2.1\AlbumRating.Services.AssemblyInfoInputs.cache
+C:\Programming\it-career\KOLEVGEI\AlbumRatingProject\AlbumRating.Services\obj\Debug\netcoreapp2.1\AlbumRating.Services.AssemblyInfo.cs
+C:\Programming\it-career\KOLEVGEI\AlbumRatingProject\AlbumRating.Services\obj\Debug\netcoreapp2.1\AlbumRating.Services.csproj.CopyComplete
+C:\Programming\it-career\KOLEVGEI\AlbumRatingProject\AlbumRating.Services\obj\Debug\netcoreapp2.1\AlbumRating.Services.dll
+C:\Programming\it-career\KOLEVGEI\AlbumRatingProject\AlbumRating.Services\obj\Debug\netcoreapp2.1\AlbumRating.Services.pdb

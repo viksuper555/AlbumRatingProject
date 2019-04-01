@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 
 namespace AlbumRating.Controllers
 {
-    public class AlbumsController : Controller
+    public class AlbumController : Controller
     {
         private IAlbumsService service;
 
-        public AlbumsController(IAlbumsService Service)
+        public AlbumController(IAlbumsService service)
         {
-            this.service = Service;
+            this.service = service;
         }
 
         public IActionResult Create()
