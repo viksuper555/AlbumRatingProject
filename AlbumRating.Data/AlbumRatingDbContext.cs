@@ -25,7 +25,7 @@ namespace AlbumRating.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
            base.OnModelCreating(modelBuilder);
-           // modelBuilder.Entity<UserRatedAlbum>().HasKey(ura => new { ura.UserId, ura.AlbumId });
+           modelBuilder.Entity<UserRatedAlbum>().HasKey(ura => new { ura.UserId, ura.AlbumId });
 
         }
 
