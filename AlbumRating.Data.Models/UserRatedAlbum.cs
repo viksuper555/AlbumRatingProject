@@ -8,8 +8,10 @@ namespace AlbumRating.Data.Models
 {
     public class UserRatedAlbum
     {
-        [Key, Column(Order = 0)]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Key, Column]
         public int UserId { get; set; }
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Key, Column(Order = 1)]
         public int AlbumId { get; set; }
 

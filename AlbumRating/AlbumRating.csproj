@@ -16,4 +16,8 @@
     <ProjectReference Include="..\AlbumRating.ViewModels\AlbumRating.ViewModels.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Areas\Identity\Services\" />
+  </ItemGroup>
+
 </Project>

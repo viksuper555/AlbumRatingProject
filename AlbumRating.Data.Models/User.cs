@@ -1,11 +1,12 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Identity;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace AlbumRating.Data.Models
 {
 
-    public class User
+    public class User : IdentityUser
     {
 
         public User()

@@ -1,12 +1,11 @@
 ﻿using AlbumRating.Data.Models;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace AlbumRating.Data
 {
-    public class AlbumRatingDbContext : DbContext 
+    public class AlbumRatingDbContext : IdentityDbContext<User>
     {
         public AlbumRatingDbContext(DbContextOptions<AlbumRatingDbContext> options) : base(options)
         {
@@ -25,8 +24,8 @@ namespace AlbumRating.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            //base.OnModelCreating(modelBuilder);
-            modelBuilder.Entity<UserRatedAlbum>().HasKey(ura => new { ura.UserId, ura.AlbumId });
+           base.OnModelCreating(modelBuilder);
+           // modelBuilder.Entity<UserRatedAlbum>().HasKey(ura => new { ura.UserId, ura.AlbumId });
 
         }
 
