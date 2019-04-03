@@ -38,6 +38,17 @@
                     <li><a asp-area="" asp-controller="Genre" asp-action="Create">Add Genre</a></li>
 
 
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <li><a asp-area="Identity" asp-page="/Account/Logout">Logout</a></li>
+
+                    }
+                    else
+                    {
+                        <li><a asp-area="Identity" asp-page="/Account/Login">Login</a></li>
+                        <li><a asp-area="Identity" asp-page="/Account/Register">Register</a></li>
+                    }
+
                 </ul>
             </div>
         </div>

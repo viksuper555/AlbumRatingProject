@@ -231,3 +231,4 @@ C:\Programming\it-career\course-project\AlbumRatingProject\AlbumRating\obj\Debug
 C:\Programming\it-career\course-project\AlbumRatingProject\AlbumRating\obj\Debug\netcoreapp2.1\AlbumRating.dll
 C:\Programming\it-career\course-project\AlbumRatingProject\AlbumRating\obj\Debug\netcoreapp2.1\AlbumRating.pdb
 C:\Programming\it-career\course-project\AlbumRatingProject\AlbumRating\obj\Debug\netcoreapp2.1\Razor\Views\Genre\Create.g.cshtml.cs
+C:\Users\viksu\Desktop\AlbumRatingProject\AlbumRating\obj\Debug\netcoreapp2.1\Razor\Views\Genre\Create.g.cshtml.cs
