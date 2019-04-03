@@ -4,4 +4,8 @@
     <TargetFramework>netcoreapp2.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\AlbumRating.Data.Models\AlbumRating.Data.Models.csproj" />
+  </ItemGroup>
+
 </Project>

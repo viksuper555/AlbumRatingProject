@@ -2,6 +2,7 @@
 using AlbumRating.Data.Models;
 using AlbumRating.Services.Contracts;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace AlbumRating.Services
@@ -14,9 +15,10 @@ namespace AlbumRating.Services
         {
             this.context = context;
         }
-        public int CreateAlbum(string title, string artist, int year, string genre) 
+        public int CreateAlbum(string title, string artist, int year, int genreId) 
         {
-            var album = new Album() {Title = title, Artist = artist, Year = year, Genre = genre };
+
+            var album = new Album() {Title = title, Artist = artist, Year = year, GenreId = genreId };
             context.Albums.Add(album);
             context.SaveChanges();
 
@@ -29,6 +31,11 @@ namespace AlbumRating.Services
             this.context.Albums.Remove(album);
             this.context.SaveChanges();
             return album.AlbumId;
+        }
+
+        public List<Album> GetAll()
+        {
+            return this.context.Albums.ToList();
         }
     }
 }

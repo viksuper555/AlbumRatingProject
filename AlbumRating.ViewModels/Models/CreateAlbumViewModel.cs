@@ -1,4 +1,6 @@
-﻿using System;
+﻿using AlbumRating.Data.Models;
+using System.Collections.Generic;
+using System;
 
 namespace AlbumRating.ViewModels.Models
 {
@@ -8,8 +10,11 @@ namespace AlbumRating.ViewModels.Models
 
         public int Year { get; set; }
 
-        public string Genre { get; set; }
-
         public string Title { get; set; }
+
+        public int GenreId { get; set; }
+
+        public List<Genre> Genres { get; set; }
+
     }
 }

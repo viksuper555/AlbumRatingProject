@@ -28,3 +28,15 @@ C:\Programming\it-career\KOLEVGEI\AlbumRatingProject\AlbumRating.Data.Models\obj
 C:\Users\viksu\Desktop\AlbumRatingProject\AlbumRating.Data.Models\bin\Debug\netcoreapp2.1\Microsoft.Extensions.Identity.Stores.dll
 C:\Users\viksu\Desktop\AlbumRatingProject\AlbumRating.Data.Models\bin\Debug\netcoreapp2.1\Microsoft.Extensions.Identity.Stores.xml
 C:\Users\viksu\Desktop\AlbumRatingProject\AlbumRating.Data.Models\obj\Debug\netcoreapp2.1\AlbumRating.Data.Models.csproj.CopyComplete
+C:\Programming\it-career\course-project\AlbumRatingProject\AlbumRating.Data.Models\bin\Debug\netcoreapp2.1\AlbumRating.Data.Models.deps.json
+C:\Programming\it-career\course-project\AlbumRatingProject\AlbumRating.Data.Models\bin\Debug\netcoreapp2.1\AlbumRating.Data.Models.dll
+C:\Programming\it-career\course-project\AlbumRatingProject\AlbumRating.Data.Models\bin\Debug\netcoreapp2.1\AlbumRating.Data.Models.pdb
+C:\Programming\it-career\course-project\AlbumRatingProject\AlbumRating.Data.Models\bin\Debug\netcoreapp2.1\Microsoft.Extensions.Identity.Stores.dll
+C:\Programming\it-career\course-project\AlbumRatingProject\AlbumRating.Data.Models\bin\Debug\netcoreapp2.1\Microsoft.Extensions.Identity.Stores.xml
+C:\Programming\it-career\course-project\AlbumRatingProject\AlbumRating.Data.Models\obj\Debug\netcoreapp2.1\AlbumRating.Data.Models.csprojAssemblyReference.cache
+C:\Programming\it-career\course-project\AlbumRatingProject\AlbumRating.Data.Models\obj\Debug\netcoreapp2.1\AlbumRating.Data.Models.csproj.CoreCompileInputs.cache
+C:\Programming\it-career\course-project\AlbumRatingProject\AlbumRating.Data.Models\obj\Debug\netcoreapp2.1\AlbumRating.Data.Models.AssemblyInfoInputs.cache
+C:\Programming\it-career\course-project\AlbumRatingProject\AlbumRating.Data.Models\obj\Debug\netcoreapp2.1\AlbumRating.Data.Models.AssemblyInfo.cs
+C:\Programming\it-career\course-project\AlbumRatingProject\AlbumRating.Data.Models\obj\Debug\netcoreapp2.1\AlbumRating.Data.Models.csproj.CopyComplete
+C:\Programming\it-career\course-project\AlbumRatingProject\AlbumRating.Data.Models\obj\Debug\netcoreapp2.1\AlbumRating.Data.Models.dll
+C:\Programming\it-career\course-project\AlbumRatingProject\AlbumRating.Data.Models\obj\Debug\netcoreapp2.1\AlbumRating.Data.Models.pdb

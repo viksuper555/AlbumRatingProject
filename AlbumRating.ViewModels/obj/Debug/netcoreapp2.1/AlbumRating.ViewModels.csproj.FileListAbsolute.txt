@@ -25,3 +25,17 @@ C:\Programming\it-career\KOLEVGEI\AlbumRatingProject\AlbumRating.ViewModels\obj\
 C:\Programming\it-career\KOLEVGEI\AlbumRatingProject\AlbumRating.ViewModels\obj\Debug\netcoreapp2.1\AlbumRating.ViewModels.AssemblyInfo.cs
 C:\Programming\it-career\KOLEVGEI\AlbumRatingProject\AlbumRating.ViewModels\obj\Debug\netcoreapp2.1\AlbumRating.ViewModels.dll
 C:\Programming\it-career\KOLEVGEI\AlbumRatingProject\AlbumRating.ViewModels\obj\Debug\netcoreapp2.1\AlbumRating.ViewModels.pdb
+C:\Programming\it-career\course-project\AlbumRatingProject\AlbumRating.ViewModels\bin\Debug\netcoreapp2.1\AlbumRating.ViewModels.deps.json
+C:\Programming\it-career\course-project\AlbumRatingProject\AlbumRating.ViewModels\bin\Debug\netcoreapp2.1\AlbumRating.ViewModels.dll
+C:\Programming\it-career\course-project\AlbumRatingProject\AlbumRating.ViewModels\bin\Debug\netcoreapp2.1\AlbumRating.ViewModels.pdb
+C:\Programming\it-career\course-project\AlbumRatingProject\AlbumRating.ViewModels\obj\Debug\netcoreapp2.1\AlbumRating.ViewModels.csprojAssemblyReference.cache
+C:\Programming\it-career\course-project\AlbumRatingProject\AlbumRating.ViewModels\obj\Debug\netcoreapp2.1\AlbumRating.ViewModels.csproj.CoreCompileInputs.cache
+C:\Programming\it-career\course-project\AlbumRatingProject\AlbumRating.ViewModels\obj\Debug\netcoreapp2.1\AlbumRating.ViewModels.AssemblyInfoInputs.cache
+C:\Programming\it-career\course-project\AlbumRatingProject\AlbumRating.ViewModels\obj\Debug\netcoreapp2.1\AlbumRating.ViewModels.AssemblyInfo.cs
+C:\Programming\it-career\course-project\AlbumRatingProject\AlbumRating.ViewModels\obj\Debug\netcoreapp2.1\AlbumRating.ViewModels.dll
+C:\Programming\it-career\course-project\AlbumRatingProject\AlbumRating.ViewModels\obj\Debug\netcoreapp2.1\AlbumRating.ViewModels.pdb
+C:\Programming\it-career\course-project\AlbumRatingProject\AlbumRating.ViewModels\bin\Debug\netcoreapp2.1\AlbumRating.Data.Models.dll
+C:\Programming\it-career\course-project\AlbumRatingProject\AlbumRating.ViewModels\bin\Debug\netcoreapp2.1\Microsoft.Extensions.Identity.Stores.dll
+C:\Programming\it-career\course-project\AlbumRatingProject\AlbumRating.ViewModels\bin\Debug\netcoreapp2.1\AlbumRating.Data.Models.pdb
+C:\Programming\it-career\course-project\AlbumRatingProject\AlbumRating.ViewModels\bin\Debug\netcoreapp2.1\Microsoft.Extensions.Identity.Stores.xml
+C:\Programming\it-career\course-project\AlbumRatingProject\AlbumRating.ViewModels\obj\Debug\netcoreapp2.1\AlbumRating.ViewModels.csproj.CopyComplete

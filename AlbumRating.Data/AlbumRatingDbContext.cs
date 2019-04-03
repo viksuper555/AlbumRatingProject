@@ -7,12 +7,15 @@ namespace AlbumRating.Data
 {
     public class AlbumRatingDbContext : IdentityDbContext<User>
     {
+
+
         public AlbumRatingDbContext(DbContextOptions<AlbumRatingDbContext> options) : base(options)
         {
         }
 
         public DbSet<User> Users { get; set; }
         public DbSet<Album> Albums { get; set; }
+        public DbSet<Genre> Genres { get; set; }
         public DbSet<UserRatedAlbum> UserRatedAlbums { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -24,8 +27,8 @@ namespace AlbumRating.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-           base.OnModelCreating(modelBuilder);
-           modelBuilder.Entity<UserRatedAlbum>().HasKey(ura => new { ura.UserId, ura.AlbumId });
+            base.OnModelCreating(modelBuilder);
+            modelBuilder.Entity<UserRatedAlbum>().HasKey(ura => new { ura.UserId, ura.AlbumId });
 
         }
 

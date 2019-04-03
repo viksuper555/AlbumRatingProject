@@ -1,31 +1,45 @@
-﻿using AlbumRating.Services.Contracts;
+﻿using AlbumRating.Services;
+using AlbumRating.Services.Contracts;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using AlbumRating.ViewModels.Models;
 using System.Threading.Tasks;
 
 namespace AlbumRating.Controllers
 {
     public class AlbumController : Controller
     {
-        private IAlbumsService service;
-        private int last_id = 0;
+        private IAlbumsService albumService;
+        private IGenreService genreService;
 
-        public AlbumController(IAlbumsService service)
+
+        public AlbumController(IAlbumsService albumService, IGenreService genreService)
         {
-            this.service = service;
+            this.albumService = albumService;
+            this.genreService = genreService;
+        }
+
+        public IActionResult Index()
+        {
+            var viewModel = new IndexAllAlbumsViewModel();
+            viewModel.Albums = this.albumService.GetAll();
+            return this.View(viewModel);
         }
 
         public IActionResult Create()
         {
-            return this.View();
+            var viewModel = new CreateAlbumViewModel();
+            viewModel.Genres = this.genreService.GetAll();
+            return this.View(viewModel);
         }
 
         [HttpPost]
-        public IActionResult Create(string title, string artist, int year, string genre)
+        public IActionResult Create(string title, string artist, int year, int genreId)
         {
-            service.CreateAlbum(title, artist, year, genre);
+            this.albumService.CreateAlbum(title, artist, year, genreId); // 
+
             return this.RedirectToAction("Index", "Home"); // change to redirect to some other page
         }
 
@@ -37,7 +51,7 @@ namespace AlbumRating.Controllers
         [HttpPost]
         public IActionResult Delete(string title)
         {
-            service.DeleteAlbum(title);
+            this.albumService.DeleteAlbum(title);
             return this.RedirectToAction("Index", "Home"); // change to redirect to some other page
         }
 

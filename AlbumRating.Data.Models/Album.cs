@@ -16,16 +16,12 @@ namespace AlbumRating.Data.Models
 
         public int Year { get; set; }
 
-        public string Genre { get; set; }
+        public int GenreId { get; set; }
+        public Genre Genre { get; set; }
 
         public string Title { get; set; }
 
         public ICollection<UserRatedAlbum> UserRatedAlbums { get; set; }
-
-        public override string ToString()
-        {
-            return $"{this.Artist} {this.Title}";
-        }
 
     }
 }

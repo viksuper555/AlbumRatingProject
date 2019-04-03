@@ -14,17 +14,13 @@ namespace AlbumRating.Data.Models
         {
             this.UserRatedAlbums = new List<UserRatedAlbum>();
         }
+
         [Key]
         public int UserId { get; set; }
 
         public string Name { get; set; }
 
         public ICollection<UserRatedAlbum> UserRatedAlbums { get; set; }
-
-        public override string ToString()
-        {
-            return this.Name;
-        }
 
     }
 }

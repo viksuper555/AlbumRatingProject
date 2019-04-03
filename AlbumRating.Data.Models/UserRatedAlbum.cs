@@ -8,7 +8,6 @@ namespace AlbumRating.Data.Models
 {
     public class UserRatedAlbum
     {
-
         [Key, Column]
         public int UserId { get; set; }
         [Key, Column(Order = 1)]
