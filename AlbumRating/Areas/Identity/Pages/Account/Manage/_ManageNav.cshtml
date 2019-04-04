@@ -1,5 +1,4 @@
-﻿@using AlbumRating.Data.Models;
-@inject SignInManager<User> SignInManager
+﻿@inject SignInManager<User> SignInManager
 @{
     var hasExternalLogins = (await SignInManager.GetExternalAuthenticationSchemesAsync()).Any();
 }

@@ -14,7 +14,6 @@ namespace AlbumRating.Controllers
         private IAlbumsService albumService;
         private IGenreService genreService;
 
-
         public AlbumController(IAlbumsService albumService, IGenreService genreService)
         {
             this.albumService = albumService;
@@ -38,8 +37,7 @@ namespace AlbumRating.Controllers
         [HttpPost]
         public IActionResult Create(string title, string artist, int year, int genreId)
         {
-            this.albumService.CreateAlbum(title, artist, year, genreId); // 
-
+            int albumId  = this.albumService.CreateAlbum(title, artist, year, genreId); //
             return this.RedirectToAction("ListAll"); // change to redirect to some other page
         }
 

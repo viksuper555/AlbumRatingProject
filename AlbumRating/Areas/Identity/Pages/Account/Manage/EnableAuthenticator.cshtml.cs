@@ -6,11 +6,11 @@ using System.Text;
 using System.Text.Encodings.Web;
 using System.Linq;
 using System.Threading.Tasks;
+using AlbumRating.Data.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
-using AlbumRating.Data.Models;
 
 namespace AlbumRating.Areas.Identity.Pages.Account.Manage
 {

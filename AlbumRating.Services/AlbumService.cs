@@ -21,7 +21,6 @@ namespace AlbumRating.Services
             var album = new Album() {Title = title, Artist = artist, Year = year, GenreId = genreId };
             context.Albums.Add(album);
             context.SaveChanges();
-
             return album.AlbumId;
         }
 
