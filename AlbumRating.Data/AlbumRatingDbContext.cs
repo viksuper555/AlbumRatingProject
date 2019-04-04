@@ -13,7 +13,7 @@ namespace AlbumRating.Data
         {
         }
 
-        public DbSet<User> IdentityUsers { get; set; }
+        public DbSet<User> Users { get; set; }
         public DbSet<Album> Albums { get; set; }
         public DbSet<Genre> Genres { get; set; }
         public DbSet<UserRatedAlbum> UserRatedAlbums { get; set; }
