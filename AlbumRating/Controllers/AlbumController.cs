@@ -49,13 +49,18 @@ namespace AlbumRating.Controllers
 
         public IActionResult Delete()
         {
-            return this.View();
+            var viewModel = new DeleteAlbumViewModel();
+            viewModel.Albums = this.albumService.GetAll();
+            return this.View(viewModel);
         }
 
         [HttpPost]
-        public IActionResult Delete(string title)
+        public IActionResult Delete(int albumId)
         {
-            this.albumService.DeleteAlbum(title);
+            var viewModel = new DeleteAlbumViewModel();
+            viewModel.Albums = this.albumService.GetAll();
+
+            this.albumService.DeleteAlbum(albumId);
             return this.RedirectToAction("ListAll"); // change to redirect to some other page
         }
 

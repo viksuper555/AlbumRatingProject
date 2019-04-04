@@ -30,8 +30,6 @@ namespace AlbumRating.Controllers
             var viewModel = new RateAlbumViewModel();
             viewModel.Albums = this.albumService.GetAll();
             return this.View(viewModel);
-
-           // return this.View();
         }
 
         [HttpPost]
@@ -45,7 +43,6 @@ namespace AlbumRating.Controllers
             
             this.userService.RateAlbum(albumId, rating, currentUser.UserId);
             return this.RedirectToAction("ListAll", "Album");
-            //return this.View(viewModel);
         }
 
         /*[AllowAnonymous]

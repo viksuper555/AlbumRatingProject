@@ -24,9 +24,9 @@ namespace AlbumRating.Services
             return album.AlbumId;
         }
 
-        public int DeleteAlbum(string title)
+        public int DeleteAlbum(int albumId)
         {
-            var album = this.context.Albums.FirstOrDefault(x => x.Title == title);
+            var album = this.context.Albums.FirstOrDefault(x => x.AlbumId == albumId);
             this.context.Albums.Remove(album);
             this.context.SaveChanges();
             return album.AlbumId;

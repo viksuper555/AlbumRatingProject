@@ -9,7 +9,7 @@ namespace AlbumRating.Services.Contracts
     {
         int CreateAlbum(string title, string artist, int year, int genreId);
 
-        int DeleteAlbum(string title);
+        int DeleteAlbum(int albumId);
 
         List<Album> GetAll();
 

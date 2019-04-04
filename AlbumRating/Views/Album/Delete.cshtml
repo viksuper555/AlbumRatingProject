@@ -13,9 +13,9 @@
     <form asp-action="Delete">
 
         <div class="form-group">
-            <label asp-for="Title" class="control-label"></label>
-            <input asp-for="Title" class="form-control" />
-            <span asp-validation-for="Title" class="text-danger"></span>
+            <label asp-for="Albums" class="control-label"></label>
+            <select asp-for="AlbumId" asp-items="@(new SelectList(Model.Albums,"AlbumId","Title"))"></select>
+            <span asp-validation-for="Albums" class="text-danger"></span>
         </div>
 
 
