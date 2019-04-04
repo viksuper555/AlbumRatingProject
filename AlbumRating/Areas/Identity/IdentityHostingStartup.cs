@@ -2,6 +2,8 @@
 using AlbumRating.Data;
 using AlbumRating.Data.Models;
 using AlbumRating.Models;
+using AlbumRating.Services;
+using AlbumRating.Services.Contracts;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI;

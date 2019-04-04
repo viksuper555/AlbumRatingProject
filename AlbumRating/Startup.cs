@@ -48,15 +48,17 @@ namespace AlbumRating
 
             });
 
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
             //services.AddDbContext<AlbumRatingDbContext>(options => options.UseSqlServer(ConfigurationData.ConnectionString));
             //services.AddDbContext<AlbumRatingDbContext>(o => o.UseSqlServer(Connection.CONNECTION_STRING));
             services.AddDbContext<AlbumRatingDbContext>(o => o.UseSqlServer(Configuration.GetConnectionString("AlbumRatingContextConnection")));
 
-
             services.AddScoped<IAlbumsService, AlbumService>(); //
-            services.AddScoped<IGenreService, GenreService>(); 
+            services.AddScoped<IGenreService, GenreService>();
+            services.AddScoped<IRateAlbumService, RateAlbumService>();
+
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
 
         }
 

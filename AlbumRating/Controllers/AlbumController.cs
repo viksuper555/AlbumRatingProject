@@ -7,6 +7,7 @@ using System.Linq;
 using AlbumRating.ViewModels.Models;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 
 namespace AlbumRating.Controllers
 {
@@ -16,10 +17,12 @@ namespace AlbumRating.Controllers
         private IAlbumsService albumService;
         private IGenreService genreService;
 
+
         public AlbumController(IAlbumsService albumService, IGenreService genreService)
         {
             this.albumService = albumService;
             this.genreService = genreService;
+
         }
 
         [AllowAnonymous]
