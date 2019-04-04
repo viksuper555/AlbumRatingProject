@@ -28,9 +28,9 @@ namespace AlbumRating.Services
             return user;
         }
 
-        public int RateAlbum(string title, int rating, int userId)
+        public int RateAlbum(int albumId, int rating, int userId)
         {
-            var album = this.context.Albums.FirstOrDefault(x => x.Title == title);
+            var album = this.context.Albums.FirstOrDefault(x => x.AlbumId == albumId);
             var user = this.context.Users.FirstOrDefault(x => x.UserId == userId);
 
             var ratedAlbum = new UserRatedAlbum() { User = user, UserId = userId, Album = album, AlbumId = album.AlbumId, Rating = rating };

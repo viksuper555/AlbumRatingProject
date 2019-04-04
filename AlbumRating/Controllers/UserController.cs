@@ -1,4 +1,5 @@
 ﻿using AlbumRating.Services.Contracts;
+using AlbumRating.ViewModels.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -11,26 +12,40 @@ namespace AlbumRating.Controllers
     [Authorize]
     public class UserController : Controller
     {
+        private IAlbumsService albumService;
+        private IGenreService genreService;
         private IUserService userService;
 
-        public UserController(IUserService userService)
+
+        public UserController(IUserService userService, IAlbumsService albumService, IGenreService genreService)
         {
+            this.albumService = albumService;
+            this.genreService = genreService;
             this.userService = userService;
+
         }
 
         public IActionResult Rate()
         {
-            return this.View();
+            var viewModel = new RateAlbumViewModel();
+            viewModel.Albums = this.albumService.GetAll();
+            return this.View(viewModel);
+
+           // return this.View();
         }
 
         [HttpPost]
-        public IActionResult Rate(string title, int rating)
+        public IActionResult Rate(int albumId, int rating)
         {
+            var viewModel = new RateAlbumViewModel();
+            viewModel.Albums = this.albumService.GetAll();
+
             var currentUserName = this.User.Identity.Name;
             var currentUser = this.userService.GetUserByName(currentUserName);
             
-            this.userService.RateAlbum(title, rating, currentUser.UserId);
-            return this.RedirectToAction("ListAll");
+            this.userService.RateAlbum(albumId, rating, currentUser.UserId);
+            return this.RedirectToAction("ListAll", "Album");
+            //return this.View(viewModel);
         }
 
         /*[AllowAnonymous]

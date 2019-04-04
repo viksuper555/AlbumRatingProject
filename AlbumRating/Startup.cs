@@ -55,7 +55,7 @@ namespace AlbumRating
 
             services.AddScoped<IAlbumsService, AlbumService>(); //
             services.AddScoped<IGenreService, GenreService>();
-            services.AddScoped<IRateAlbumService, RateAlbumService>();
+            services.AddScoped<IUserService, UserService>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 

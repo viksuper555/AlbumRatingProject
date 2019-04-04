@@ -11,7 +11,7 @@ namespace AlbumRating.Services.Contracts
 
         User GetUserByName(string name);
 
-        int RateAlbum(string title, int rating, int userId);
+        int RateAlbum(int albumId, int rating, int userId);
 
     }
 }
