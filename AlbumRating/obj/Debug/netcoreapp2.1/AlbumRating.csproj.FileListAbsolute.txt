@@ -215,7 +215,6 @@ C:\Programming\it-career\course-project\AlbumRatingProject\AlbumRating\obj\Debug
 C:\Programming\it-career\course-project\AlbumRatingProject\AlbumRating\obj\Debug\netcoreapp2.1\Razor\Views\Album\Delete.g.cshtml.cs
 C:\Programming\it-career\course-project\AlbumRatingProject\AlbumRating\obj\Debug\netcoreapp2.1\Razor\Views\Home\About.g.cshtml.cs
 C:\Programming\it-career\course-project\AlbumRatingProject\AlbumRating\obj\Debug\netcoreapp2.1\Razor\Views\Home\Contact.g.cshtml.cs
-C:\Programming\it-career\course-project\AlbumRatingProject\AlbumRating\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.g.cshtml.cs
 C:\Programming\it-career\course-project\AlbumRatingProject\AlbumRating\obj\Debug\netcoreapp2.1\Razor\Views\Home\Privacy.g.cshtml.cs
 C:\Programming\it-career\course-project\AlbumRatingProject\AlbumRating\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Error.g.cshtml.cs
 C:\Programming\it-career\course-project\AlbumRatingProject\AlbumRating\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_CookieConsentPartial.g.cshtml.cs
@@ -232,3 +231,5 @@ C:\Programming\it-career\course-project\AlbumRatingProject\AlbumRating\obj\Debug
 C:\Programming\it-career\course-project\AlbumRatingProject\AlbumRating\obj\Debug\netcoreapp2.1\AlbumRating.pdb
 C:\Programming\it-career\course-project\AlbumRatingProject\AlbumRating\obj\Debug\netcoreapp2.1\Razor\Views\Genre\Create.g.cshtml.cs
 C:\Users\viksu\Desktop\AlbumRatingProject\AlbumRating\obj\Debug\netcoreapp2.1\Razor\Views\Genre\Create.g.cshtml.cs
+C:\Programming\it-career\course-project\AlbumRatingProject\AlbumRating\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.g.cshtml.cs
+C:\Programming\it-career\course-project\AlbumRatingProject\AlbumRating\obj\Debug\netcoreapp2.1\Razor\Views\Album\ListAll.g.cshtml.cs

@@ -37,5 +37,6 @@ namespace AlbumRating.Services
         {
             return this.context.Albums.ToList();
         }
+
     }
 }

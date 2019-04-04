@@ -49,6 +49,7 @@ namespace AlbumRating
             });
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
             //services.AddDbContext<AlbumRatingDbContext>(options => options.UseSqlServer(ConfigurationData.ConnectionString));
             //services.AddDbContext<AlbumRatingDbContext>(o => o.UseSqlServer(Connection.CONNECTION_STRING));
             services.AddDbContext<AlbumRatingDbContext>(o => o.UseSqlServer(Configuration.GetConnectionString("AlbumRatingContextConnection")));
@@ -82,7 +83,7 @@ namespace AlbumRating
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{controller=Album}/{action=ListAll}");
             });
 
 

@@ -21,7 +21,7 @@ namespace AlbumRating.Controllers
             this.genreService = genreService;
         }
 
-        public IActionResult Index()
+        public IActionResult ListAll()
         {
             var viewModel = new IndexAllAlbumsViewModel();
             viewModel.Albums = this.albumService.GetAll();
@@ -40,7 +40,7 @@ namespace AlbumRating.Controllers
         {
             this.albumService.CreateAlbum(title, artist, year, genreId); // 
 
-            return this.RedirectToAction("Index", "Home"); // change to redirect to some other page
+            return this.RedirectToAction("ListAll"); // change to redirect to some other page
         }
 
         public IActionResult Delete()
@@ -52,7 +52,7 @@ namespace AlbumRating.Controllers
         public IActionResult Delete(string title)
         {
             this.albumService.DeleteAlbum(title);
-            return this.RedirectToAction("Index", "Home"); // change to redirect to some other page
+            return this.RedirectToAction("ListAll"); // change to redirect to some other page
         }
 
     }
