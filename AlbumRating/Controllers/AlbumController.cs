@@ -6,9 +6,11 @@ using System.Collections.Generic;
 using System.Linq;
 using AlbumRating.ViewModels.Models;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 
 namespace AlbumRating.Controllers
 {
+    [Authorize]
     public class AlbumController : Controller
     {
         private IAlbumsService albumService;
@@ -20,6 +22,7 @@ namespace AlbumRating.Controllers
             this.genreService = genreService;
         }
 
+        [AllowAnonymous]
         public IActionResult ListAll()
         {
             var viewModel = new IndexAllAlbumsViewModel();

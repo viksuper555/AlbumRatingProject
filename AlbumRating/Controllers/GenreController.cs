@@ -1,4 +1,5 @@
 ﻿using AlbumRating.Services.Contracts;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -7,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace AlbumRating.Controllers
 {
+    [Authorize]
     public class GenreController : Controller
     {
         private IGenreService service;
