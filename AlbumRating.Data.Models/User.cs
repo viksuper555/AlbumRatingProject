@@ -9,7 +9,6 @@ namespace AlbumRating.Data.Models
 
     public class User : IdentityUser
     {
-
         public User()
         {
             this.UserRatedAlbums = new List<UserRatedAlbum>();

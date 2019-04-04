@@ -1,12 +1,11 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "ListAll";
 }
 
 @model AlbumRating.ViewModels.Models.IndexAllAlbumsViewModel
+    <h3>All Albums</h3>
+    @foreach (var a in Model.Albums)
+    {
+        <h4>@a.Title @a.Artist @a.Year</h4>
 
-<h3>All Albums</h3>
-@foreach (var a in Model.Albums)
-{
-<h4>@a.Title @a.Artist @a.Year</h4>
-
-}
+    }
