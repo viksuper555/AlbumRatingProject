@@ -36,6 +36,17 @@ namespace AlbumRating
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
+            services.Configure<IdentityOptions>(options =>
+            {
+                // configure password requirements
+                options.Password.RequireNonAlphanumeric = false;
+                options.Password.RequiredLength = 4;
+                options.Password.RequireUppercase = false;
+
+                options.SignIn.RequireConfirmedEmail = false;  // for now ? maybe
+
+
+            });
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             //services.AddDbContext<AlbumRatingDbContext>(options => options.UseSqlServer(ConfigurationData.ConnectionString));
@@ -64,6 +75,7 @@ namespace AlbumRating
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
+            
             app.UseAuthentication();
 
             app.UseMvc(routes =>
@@ -72,6 +84,8 @@ namespace AlbumRating
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+
+
         }
     }
 }
