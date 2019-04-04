@@ -73,11 +73,11 @@ namespace AlbumRating.Areas.Identity.Pages.Account
                 if (_userManager.Users.Count() > 0)
                 {
                     int lastUserId = _userManager.Users.Max(x => x.UserId);
-                    user = new User { UserName = Input.Email, Email = Input.Email, UserId = lastUserId + 1 };
+                    user = new User { UserName = Input.Email, Email = Input.Email, UserId = lastUserId + 1, Name = Input.Email };
                 }
                 else
                 {
-                    user = new User { UserName = Input.Email, Email = Input.Email};
+                    user = new User { UserName = Input.Email, Email = Input.Email, Name = Input.Email };
                 }
                 var result = await _userManager.CreateAsync(user, Input.Password);
                 if (result.Succeeded)
