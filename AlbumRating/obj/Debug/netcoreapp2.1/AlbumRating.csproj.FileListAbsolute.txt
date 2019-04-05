@@ -239,3 +239,4 @@ C:\Users\viksu\Desktop\AlbumRatingProject\AlbumRating\obj\Debug\netcoreapp2.1\Ra
 C:\Programming\it-career\course-project\AlbumRatingProject\AlbumRating\obj\Debug\netcoreapp2.1\Razor\Views\Album\AlbumAlreadyAdded.g.cshtml.cs
 C:\Programming\it-career\course-project\AlbumRatingProject\AlbumRating\obj\Debug\netcoreapp2.1\Razor\Views\User\AlbumAlreadyRated.g.cshtml.cs
 C:\Programming\it-career\course-project\AlbumRatingProject\AlbumRating\obj\Debug\netcoreapp2.1\Razor\Views\Genre\GenreAlreadyAdded.g.cshtml.cs
+C:\Programming\it-career\course-project\AlbumRatingProject\AlbumRating\obj\Debug\netcoreapp2.1\Razor\Views\User\ViewAllRated.g.cshtml.cs

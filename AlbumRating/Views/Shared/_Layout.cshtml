@@ -49,6 +49,7 @@
                     {
                         <form asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Page("/Index", new { area = "" })" method="post" id="logoutForm" class="navbar-right">
                             <ul class="nav navbar-nav navbar-right">
+                                <li><a asp-area="" asp-controller="User" asp-action="ViewAllRated">Albums Rated By Me</a></li>
                                 <li>
                                     <a asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">@UserManager.GetUserName(User)</a>
                                 </li>

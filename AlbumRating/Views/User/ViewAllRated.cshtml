@@ -1,0 +1,12 @@
+﻿@model AlbumRating.ViewModels.Models.IndexAllRatedAlbumsViewModel
+
+@{
+    ViewData["Title"] = "View";
+}
+
+
+<h1>All Albums</h1>
+@foreach (var a in Model.RatedAlbums)
+{
+    <h4>@a.AlbumId @a.Rating </h4>
+}

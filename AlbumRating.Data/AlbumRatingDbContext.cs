@@ -1,5 +1,6 @@
 ﻿namespace AlbumRating.Data
 {
+    using System;
     using AlbumRating.Data.Models;
     using Microsoft.AspNetCore.Identity;
     using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
