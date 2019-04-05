@@ -41,6 +41,11 @@
             return album.AlbumId;
         }
 
+        public List<UserRatedAlbum> GetAllRatings()
+        {
+            return this.context.UserRatedAlbums.Where(x => x.User != null).ToList();
+        }
+
         public List<Album> GetAll()
         {
             return this.context.Albums.ToList();

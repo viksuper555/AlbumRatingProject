@@ -11,6 +11,8 @@
 
         int DeleteAlbum(int albumId);
 
+        List<UserRatedAlbum> GetAllRatings();
+
         List<Album> GetAll();
     }
 }

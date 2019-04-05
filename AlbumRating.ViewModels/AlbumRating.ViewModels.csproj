@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\AlbumRating.Data.Models\AlbumRating.Data.Models.csproj" />
+    <ProjectReference Include="..\AlbumRating.Data\AlbumRating.Data.csproj" />
   </ItemGroup>
 
 </Project>

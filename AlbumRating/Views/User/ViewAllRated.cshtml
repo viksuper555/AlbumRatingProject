@@ -8,5 +8,6 @@
 <h1>All Albums</h1>
 @foreach (var a in Model.RatedAlbums)
 {
-    <h4>@a.AlbumId @a.Rating </h4>
+    string title = Model.Albums.Find(x=>x.AlbumId == a.AlbumId).Title;
+    <h4>@title @a.Rating </h4>
 }

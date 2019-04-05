@@ -44,3 +44,7 @@ C:\Users\viksu\Desktop\AlbumRatingProject\AlbumRating.ViewModels\bin\Debug\netco
 C:\Users\viksu\Desktop\AlbumRatingProject\AlbumRating.ViewModels\bin\Debug\netcoreapp2.1\AlbumRating.Data.Models.pdb
 C:\Users\viksu\Desktop\AlbumRatingProject\AlbumRating.ViewModels\bin\Debug\netcoreapp2.1\Microsoft.Extensions.Identity.Stores.xml
 C:\Users\viksu\Desktop\AlbumRatingProject\AlbumRating.ViewModels\obj\Debug\netcoreapp2.1\AlbumRating.ViewModels.csproj.CopyComplete
+C:\Users\viksu\Desktop\AlbumRatingProject\AlbumRating.ViewModels\bin\Debug\netcoreapp2.1\AlbumRating.Data.dll
+C:\Users\viksu\Desktop\AlbumRatingProject\AlbumRating.ViewModels\bin\Debug\netcoreapp2.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\viksu\Desktop\AlbumRatingProject\AlbumRating.ViewModels\bin\Debug\netcoreapp2.1\AlbumRating.Data.pdb
+C:\Users\viksu\Desktop\AlbumRatingProject\AlbumRating.ViewModels\bin\Debug\netcoreapp2.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.xml

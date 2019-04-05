@@ -4,6 +4,7 @@
     using System.Collections.Generic;
     using System.Linq;
     using System.Threading.Tasks;
+    using AlbumRating.Data.Models;
     using AlbumRating.Services;
     using AlbumRating.Services.Contracts;
     using AlbumRating.ViewModels.Models;
@@ -68,6 +69,28 @@
         public IActionResult AlbumAlreadyAdded()
         {
             return this.View();
+        }
+
+        [AllowAnonymous]
+        public IActionResult ViewAllRatedGlobally()
+        {
+            var viewModel = new IndexAllRatedAlbumsGloballyViewModel();
+            viewModel.Albums = this.albumService.GetAll();
+            var ratings = this.albumService.GetAllRatings();
+            foreach (var userRatedAlbum in ratings)
+            {
+                if(viewModel.AlbumWithRating.Keys.Contains<Album>(userRatedAlbum.Album))
+                {
+                    viewModel.AlbumWithRating[userRatedAlbum.Album].Append(userRatedAlbum.Rating);
+                }
+                else
+                {
+                    List<int> list = new List<int>();
+                    list.Add(userRatedAlbum.Rating);
+                    viewModel.AlbumWithRating.Add(userRatedAlbum.Album, list);
+                }
+            }
+            return this.View(viewModel);
         }
     }
 }

@@ -53,16 +53,14 @@
             return this.View();
         }
 
-        //[AllowAnonymous] add list all rated
-
         public IActionResult ViewAllRated()
         {
             var currentUserName = this.User.Identity.Name;
             var currentUser = this.userService.GetUserByName(currentUserName);
 
             var viewModel = new IndexAllRatedAlbumsViewModel();
-            viewModel.RatedAlbums = this.userService.GetAllRated(currentUser.UserId);
-
+            viewModel.RatedAlbums = this.userService.GetAllRated(currentUser.UserId).OrderBy(x=> x.Rating).ToList();
+            viewModel.Albums = this.albumService.GetAll();
             return this.View(viewModel);
         }
 
