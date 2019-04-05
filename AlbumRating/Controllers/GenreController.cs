@@ -1,13 +1,13 @@
-﻿using AlbumRating.Services.Contracts;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace AlbumRating.Controllers
+﻿namespace AlbumRating.Controllers
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Threading.Tasks;
+    using AlbumRating.Services.Contracts;
+    using Microsoft.AspNetCore.Authorization;
+    using Microsoft.AspNetCore.Mvc;
+
     [Authorize]
     public class GenreController : Controller
     {
@@ -26,9 +26,8 @@ namespace AlbumRating.Controllers
         [HttpPost]
         public IActionResult Create(string name)
         {
-            service.CreateGenre(name);
+            this.service.CreateGenre(name);
             return this.RedirectToAction("Index", "Home");
         }
-
     }
 }

@@ -1,10 +1,10 @@
-﻿using AlbumRating.Data.Models;
-using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace AlbumRating.Services.Contracts
+﻿namespace AlbumRating.Services.Contracts
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Text;
+    using AlbumRating.Data.Models;
+
     public interface IUserService
     {
         List<User> GetAll();

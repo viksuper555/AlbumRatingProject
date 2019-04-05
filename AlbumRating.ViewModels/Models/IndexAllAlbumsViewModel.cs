@@ -1,10 +1,10 @@
-﻿using AlbumRating.Data.Models;
-using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace AlbumRating.ViewModels.Models
+﻿namespace AlbumRating.ViewModels.Models
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Text;
+    using AlbumRating.Data.Models;
+
     public class IndexAllAlbumsViewModel
     {
         public List<Album> Albums { get; set; }

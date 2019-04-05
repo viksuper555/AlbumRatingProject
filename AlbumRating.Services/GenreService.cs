@@ -1,16 +1,15 @@
-﻿using AlbumRating.Data;
-using AlbumRating.Data.Models;
-using AlbumRating.Services.Contracts;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace AlbumRating.Services
+﻿namespace AlbumRating.Services
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+    using AlbumRating.Data;
+    using AlbumRating.Data.Models;
+    using AlbumRating.Services.Contracts;
+
     public class GenreService : IGenreService
     {
-
         private AlbumRatingDbContext context;
 
         public GenreService(AlbumRatingDbContext context)
@@ -25,7 +24,6 @@ namespace AlbumRating.Services
             this.context.SaveChanges();
 
             return genre.Id;
-
         }
 
         public List<Genre> GetAll()

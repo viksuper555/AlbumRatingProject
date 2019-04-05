@@ -1,14 +1,14 @@
-﻿using AlbumRating.Services.Contracts;
-using AlbumRating.ViewModels.Models;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace AlbumRating.Controllers
+﻿namespace AlbumRating.Controllers
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Threading.Tasks;
+    using AlbumRating.Services.Contracts;
+    using AlbumRating.ViewModels.Models;
+    using Microsoft.AspNetCore.Authorization;
+    using Microsoft.AspNetCore.Mvc;
+
     [Authorize]
     public class UserController : Controller
     {
@@ -16,13 +16,11 @@ namespace AlbumRating.Controllers
         private IGenreService genreService;
         private IUserService userService;
 
-
         public UserController(IUserService userService, IAlbumsService albumService, IGenreService genreService)
         {
             this.albumService = albumService;
             this.genreService = genreService;
             this.userService = userService;
-
         }
 
         public IActionResult Rate()
@@ -45,14 +43,13 @@ namespace AlbumRating.Controllers
             return this.RedirectToAction("ListAll", "Album");
         }
 
-        /*[AllowAnonymous]
+        /*[AllowAnonymous] add list all rated
         public IActionResult ListAll()
         {
             var viewModel = new IndexAllAlbumsViewModel();
             viewModel.Albums = this.albumService.GetAll();
             return this.View(viewModel);
         }*/
-
 
     }
 }

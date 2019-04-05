@@ -1,9 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace AlbumRating.Data.Models
+﻿namespace AlbumRating.Data.Models
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Text;
+
     public class Genre
     {
         public Genre()
@@ -16,6 +16,5 @@ namespace AlbumRating.Data.Models
         public string Name { get; set; }
 
         public IEnumerable<Album> Albums { get; set; }
-
     }
 }

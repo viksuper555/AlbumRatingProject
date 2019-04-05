@@ -1,10 +1,10 @@
-﻿using AlbumRating.Data.Models;
-using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace AlbumRating.Services.Contracts
+﻿namespace AlbumRating.Services.Contracts
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Text;
+    using AlbumRating.Data.Models;
+
     public interface IAlbumsService
     {
         int CreateAlbum(string title, string artist, int year, int genreId);
@@ -12,6 +12,5 @@ namespace AlbumRating.Services.Contracts
         int DeleteAlbum(int albumId);
 
         List<Album> GetAll();
-
     }
 }

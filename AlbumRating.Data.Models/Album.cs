@@ -1,9 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-
-namespace AlbumRating.Data.Models
+﻿namespace AlbumRating.Data.Models
 {
+    using System;
+    using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
+
     public class Album
     {
         public Album()
@@ -18,11 +18,11 @@ namespace AlbumRating.Data.Models
         public int Year { get; set; }
 
         public int GenreId { get; set; }
+
         public Genre Genre { get; set; }
 
         public string Title { get; set; }
 
         public ICollection<UserRatedAlbum> UserRatedAlbums { get; set; }
-
     }
 }

@@ -1,22 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using AlbumRating.Data;
-using AlbumRating.Services;
-using AlbumRating.Services.Contracts;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-
-namespace AlbumRating
+﻿namespace AlbumRating
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Threading.Tasks;
+    using AlbumRating.Data;
+    using AlbumRating.Services;
+    using AlbumRating.Services.Contracts;
+    using Microsoft.AspNetCore.Builder;
+    using Microsoft.AspNetCore.Hosting;
+    using Microsoft.AspNetCore.Http;
+    using Microsoft.AspNetCore.HttpsPolicy;
+    using Microsoft.AspNetCore.Identity;
+    using Microsoft.AspNetCore.Mvc;
+    using Microsoft.EntityFrameworkCore;
+    using Microsoft.Extensions.Configuration;
+    using Microsoft.Extensions.DependencyInjection;
+
     public class Startup
     {
         public Startup(IConfiguration configuration)
@@ -44,22 +44,15 @@ namespace AlbumRating
                 options.Password.RequireUppercase = false;
 
                 options.SignIn.RequireConfirmedEmail = false;  // for now ? maybe
-
-
             });
 
-
-            //services.AddDbContext<AlbumRatingDbContext>(options => options.UseSqlServer(ConfigurationData.ConnectionString));
-            //services.AddDbContext<AlbumRatingDbContext>(o => o.UseSqlServer(Connection.CONNECTION_STRING));
             services.AddDbContext<AlbumRatingDbContext>(o => o.UseSqlServer(Configuration.GetConnectionString("AlbumRatingContextConnection")));
 
-            services.AddScoped<IAlbumsService, AlbumService>(); //
+            services.AddScoped<IAlbumsService, AlbumService>(); 
             services.AddScoped<IGenreService, GenreService>();
             services.AddScoped<IUserService, UserService>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-
-
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -87,8 +80,6 @@ namespace AlbumRating
                     name: "default",
                     template: "{controller=Album}/{action=ListAll}");
             });
-
-
         }
     }
 }
