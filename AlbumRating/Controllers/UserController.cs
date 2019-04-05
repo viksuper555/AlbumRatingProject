@@ -42,7 +42,7 @@
             this.userService.RateAlbum(albumId, rating, currentUser.UserId);
             return this.RedirectToAction("ListAll", "Album");
         }
-
+        
         /*[AllowAnonymous] add list all rated
         public IActionResult ListAll()
         {

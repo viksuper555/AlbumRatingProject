@@ -1,4 +1,9 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Identity
+@using AlbumRating.Data.Models
+@inject SignInManager<User> SignInManager
+@inject UserManager<User> UserManager
+
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -38,20 +43,29 @@
                     <li><a asp-area="" asp-controller="Album" asp-action="Delete">Delete Album</a></li>
                     <li><a asp-area="" asp-controller="Genre" asp-action="Create">Add Genre</a></li>
 
+                </ul>
 
-                    @if (User.Identity.IsAuthenticated)
+                    @if (SignInManager.IsSignedIn(User))
                     {
-                        <li><a asp-area="Identity" asp-page="/Account/Logout">Logout</a></li>
-                        //<li><a asp-area="Identity" asp-page="/Account/Login">Login</a></li>
-                        
+                        <form asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Page("/Index", new { area = "" })" method="post" id="logoutForm" class="navbar-right">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li>
+                                    <a asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">@UserManager.GetUserName(User)</a>
+                                </li>
+                                <li>
+                                    <button type="submit" class="btn btn-link navbar-btn navbar-link">Logout</button>
+                                </li>
+                            </ul>
+                        </form>
                     }
                     else
                     {
-                        <li><a asp-area="Identity" asp-page="/Account/Login">Login</a></li>
-                        <li><a asp-area="Identity" asp-page="/Account/Register">Register</a></li>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a asp-area="Identity" asp-page="/Account/Register">Register</a></li>
+                            <li><a asp-area="Identity" asp-page="/Account/Login">Login</a></li>
+                        </ul>
                     }
 
-                </ul>
             </div>
         </div>
     </nav>
