@@ -1,3 +1,4 @@
 /AlbumRating.Data/Migrations
 /AlbumRating.Data/Connection.cs
 Connection.cs
+appsettings.json

@@ -19,6 +19,15 @@
         public int CreateAlbum(string title, string artist, int year, int genreId)
         {
             var album = new Album() { Title = title, Artist = artist, Year = year, GenreId = genreId };
+
+            foreach (var albumInDb in this.context.Albums)
+            {
+                if (albumInDb.Title == album.Title && albumInDb.Artist == albumInDb.Artist)
+                {
+                    return 0;
+                }
+            }
+
             this.context.Albums.Add(album);
             this.context.SaveChanges();
             return album.AlbumId;

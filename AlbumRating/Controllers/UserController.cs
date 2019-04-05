@@ -38,11 +38,21 @@
 
             var currentUserName = this.User.Identity.Name;
             var currentUser = this.userService.GetUserByName(currentUserName);
-            
-            this.userService.RateAlbum(albumId, rating, currentUser.UserId);
+
+            if (this.userService.RateAlbum(albumId, rating, currentUser.UserId) == 0)
+            {
+                // take id and display info for it
+                return this.RedirectToAction("AlbumAlreadyRated"); // redirect to "you've already rated this album"
+            }
+
             return this.RedirectToAction("ListAll", "Album");
         }
-        
+
+        public IActionResult AlbumAlreadyRated()
+        {
+            return this.View();
+        }
+
         /*[AllowAnonymous] add list all rated
         public IActionResult ListAll()
         {

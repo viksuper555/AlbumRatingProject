@@ -35,10 +35,19 @@ namespace AlbumRating.Services
 
             var ratedAlbum = new UserRatedAlbum() { User = user, UserId = userId, Album = album, AlbumId = album.AlbumId, Rating = rating };
 
+            foreach (var ratedInDb in this.context.UserRatedAlbums)
+            {
+                if(ratedInDb.AlbumId == ratedAlbum.AlbumId && ratedInDb.UserId == ratedAlbum.UserId)
+                {
+                    return 0;
+                }
+            }
+
+
             this.context.UserRatedAlbums.Add(ratedAlbum);
             this.context.SaveChanges();
 
-            return user.UserId; 
+            return user.UserId;
 
         }
     }

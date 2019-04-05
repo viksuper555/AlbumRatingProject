@@ -41,7 +41,10 @@
         [HttpPost]
         public IActionResult Create(string title, string artist, int year, int genreId)
         {
-            int albumId = this.albumService.CreateAlbum(title, artist, year, genreId);
+            if(this.albumService.CreateAlbum(title, artist, year, genreId) == 0)
+            {
+                return this.RedirectToAction("AlbumAlreadyAdded");
+            }
             return this.RedirectToAction("ListAll"); // change to redirect to some other page
         }
 
@@ -60,6 +63,11 @@
 
             this.albumService.DeleteAlbum(albumId);
             return this.RedirectToAction("ListAll"); // change to redirect to some other page
+        }
+
+        public IActionResult AlbumAlreadyAdded()
+        {
+            return this.View();
         }
     }
 }

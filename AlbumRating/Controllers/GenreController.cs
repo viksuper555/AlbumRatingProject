@@ -26,8 +26,17 @@
         [HttpPost]
         public IActionResult Create(string name)
         {
-            this.service.CreateGenre(name);
-            return this.RedirectToAction("Index", "Home");
+            if(this.service.CreateGenre(name) == 0)
+            {
+                return this.RedirectToAction("GenreAlreadyAdded"); // redirect to "you've already rated this album"
+            }
+
+            return this.RedirectToAction("ListAll", "Album");
+        }
+
+        public IActionResult GenreAlreadyAdded()
+        {
+            return this.View();
         }
     }
 }
