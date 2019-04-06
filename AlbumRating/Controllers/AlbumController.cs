@@ -19,7 +19,6 @@
         private IGenreService genreService;
         private IUserService userService;
 
-
         public AlbumController(IUserService userService, IAlbumsService albumService, IGenreService genreService)
         {
             this.albumService = albumService;

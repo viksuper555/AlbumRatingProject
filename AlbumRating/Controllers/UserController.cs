@@ -66,6 +66,5 @@
             viewModel.Albums = this.albumService.GetAll();
             return this.View(viewModel);
         }
-
     }
 }
