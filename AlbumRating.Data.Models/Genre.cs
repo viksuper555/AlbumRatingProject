@@ -6,11 +6,12 @@
 
     public class Genre
     {
+        
         public Genre()
         {
             this.Albums = new List<Album>();
         }
-
+        
         public int Id { get; set; }
 
         public string Name { get; set; }

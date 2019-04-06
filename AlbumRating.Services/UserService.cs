@@ -54,7 +54,7 @@ namespace AlbumRating.Services
             this.context.SaveChanges();
 
             return user.UserId;
-
         }
+
     }
 }

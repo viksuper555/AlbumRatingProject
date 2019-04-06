@@ -3,15 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.329
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlbumRating", "AlbumRating\AlbumRating.csproj", "{93B1FD60-8DD2-4829-9258-51B76F8CF54A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AlbumRating", "AlbumRating\AlbumRating.csproj", "{93B1FD60-8DD2-4829-9258-51B76F8CF54A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlbumRating.Data", "AlbumRating.Data\AlbumRating.Data.csproj", "{E5C6AF9E-C4A9-4374-88D6-20918C9E8758}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AlbumRating.Data", "AlbumRating.Data\AlbumRating.Data.csproj", "{E5C6AF9E-C4A9-4374-88D6-20918C9E8758}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlbumRating.Data.Models", "AlbumRating.Data.Models\AlbumRating.Data.Models.csproj", "{CD6A6906-FD08-4B59-9D50-BA4EB34F170F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AlbumRating.Data.Models", "AlbumRating.Data.Models\AlbumRating.Data.Models.csproj", "{CD6A6906-FD08-4B59-9D50-BA4EB34F170F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlbumRating.Services", "AlbumRating.Services\AlbumRating.Services.csproj", "{E6C14FD0-1120-41A7-8E90-DE3CA322C5DA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AlbumRating.Services", "AlbumRating.Services\AlbumRating.Services.csproj", "{E6C14FD0-1120-41A7-8E90-DE3CA322C5DA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlbumRating.ViewModels", "AlbumRating.ViewModels\AlbumRating.ViewModels.csproj", "{E60235E4-BA50-4149-8F61-5DEB299F66E3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AlbumRating.ViewModels", "AlbumRating.ViewModels\AlbumRating.ViewModels.csproj", "{E60235E4-BA50-4149-8F61-5DEB299F66E3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlbumRating.Tests", "AlbumRating.Tests\AlbumRating.Tests.csproj", "{CC4218FB-D350-49B8-A315-20ECB7A27A79}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{E60235E4-BA50-4149-8F61-5DEB299F66E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E60235E4-BA50-4149-8F61-5DEB299F66E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E60235E4-BA50-4149-8F61-5DEB299F66E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC4218FB-D350-49B8-A315-20ECB7A27A79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC4218FB-D350-49B8-A315-20ECB7A27A79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC4218FB-D350-49B8-A315-20ECB7A27A79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC4218FB-D350-49B8-A315-20ECB7A27A79}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
