@@ -1,0 +1,213 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AlbumRating</name>
+    </assembly>
+    <members>
+        <member name="T:AlbumRating.Controllers.AlbumController">
+            <summary>
+            Responsible for handling all views in the Album folder
+            </summary>
+        </member>
+        <member name="F:AlbumRating.Controllers.AlbumController.albumService">
+            <summary>
+            Allows communication with the <c>AlbumService class</c>
+            </summary>
+        </member>
+        <member name="F:AlbumRating.Controllers.AlbumController.genreService">
+            <summary>
+            Allows communication with the <c>GenreService class</c>
+            </summary>
+        </member>
+        <member name="F:AlbumRating.Controllers.AlbumController.userService">
+            <summary>
+            Allows communication with the <c>UserService class</c>
+            </summary>
+        </member>
+        <member name="M:AlbumRating.Controllers.AlbumController.#ctor(AlbumRating.Services.Contracts.IUserService,AlbumRating.Services.Contracts.IAlbumsService,AlbumRating.Services.Contracts.IGenreService)">
+            <summary>
+            Initializes a new instance of the AlbumController class.
+            Gets called by the StartUp class.
+            </summary>
+            <param name="userService">A required service for the class.</param>
+            <param name="albumService">A required service for the class.</param>
+            <param name="genreService">A required service for the class.</param>
+        </member>
+        <member name="M:AlbumRating.Controllers.AlbumController.ListAll">
+            <summary>
+            Lists information about all Albums in the database
+            Doesn't require the user to be logged in to be displayed
+            </summary>
+            <returns>Rendered view to the response.</returns>
+        </member>
+        <member name="M:AlbumRating.Controllers.AlbumController.Create">
+            <summary>
+            Redirects to the Create page in the Album folder.
+            </summary>
+            <returns>Rendered view to the response.</returns>
+        </member>
+        <member name="M:AlbumRating.Controllers.AlbumController.Create(System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            Allows a signed in User to add an Album to the database.
+            The User must be signed in.
+            </summary>
+            <returns>Rendered view to the response.</returns>
+        </member>
+        <member name="M:AlbumRating.Controllers.AlbumController.Delete">
+            <summary>
+            Redirects to the Delete page in the Album folder.
+            </summary>
+            <returns>Rendered view to the response.</returns>
+        </member>
+        <member name="M:AlbumRating.Controllers.AlbumController.Delete(System.Int32)">
+            <summary>
+            Allows a signed in User to delete an Album from the database.
+            The User must be signed in.
+            </summary>
+            <returns>Rendered view to the response.</returns>
+        </member>
+        <member name="M:AlbumRating.Controllers.AlbumController.AlbumAlreadyAdded(System.String)">
+            <summary>
+            Notifies the User that the Album they tried to add to the database is already in it.
+            </summary>
+            <returns>Rendered view to the response.</returns>
+        </member>
+        <member name="M:AlbumRating.Controllers.AlbumController.AlbumInfo(System.Int32)">
+            <summary>
+            Displays a page with detailed info about the Album the User has clicked on.
+            </summary>
+            <returns>Rendered view to the response.</returns>
+        </member>
+        <member name="T:AlbumRating.Controllers.GenreController">
+            <summary>
+            Responsible for handling all views in the Genre folder
+            </summary>
+        </member>
+        <member name="F:AlbumRating.Controllers.GenreController.service">
+            <summary>
+            Allows communication with the <c>AlbumService class</c>
+            </summary>
+        </member>
+        <member name="M:AlbumRating.Controllers.GenreController.#ctor(AlbumRating.Services.Contracts.IGenreService)">
+            <summary>
+            Initializes a new instance of the GenreController class.
+            Gets called by the StartUp class.
+            </summary>
+            <param name="service">A required service for the class.</param>
+        </member>
+        <member name="M:AlbumRating.Controllers.GenreController.Create">
+            <summary>
+            Redirects to the Create page in the Genre folder.
+            </summary>
+            <returns>Rendered view to the response.</returns>
+        </member>
+        <member name="M:AlbumRating.Controllers.GenreController.Create(System.String)">
+            <summary>
+            Allows a signed in User to add a Genre to the database.
+            The User must be signed in.
+            </summary>
+            <returns>Rendered view to the response.</returns>
+        </member>
+        <member name="M:AlbumRating.Controllers.GenreController.GenreAlreadyAdded(System.String)">
+            <summary>
+            Notifies the User that the Genre they tried to add to the database is already in it.
+            </summary>
+            <returns>Rendered view to the response.</returns>
+        </member>
+        <member name="T:AlbumRating.Controllers.HomeController">
+            <summary>
+            Responsible for handling all views in the Home folder.
+            </summary>
+            
+        </member>
+        <member name="M:AlbumRating.Controllers.HomeController.Index">
+            <summary>
+            The main page of the website.
+            Redirects to the Index page in the Home folder.
+            </summary>
+            <returns>Rendered view to the response.</returns>
+        </member>
+        <member name="M:AlbumRating.Controllers.HomeController.About">
+            <summary>
+            Contains info about the website.
+            Redirects to the About page in the Home folder.
+            </summary>
+            <returns>Rendered view to the response.</returns>
+        </member>
+        <member name="M:AlbumRating.Controllers.HomeController.Contact">
+            <summary>
+            Contains contact info about the site owners/ developers.
+            Redirects to the Contact page in the Home folder.
+            </summary>
+            <returns>Rendered view to the response.</returns>
+        </member>
+        <member name="M:AlbumRating.Controllers.HomeController.Privacy">
+            <summary>
+            Contains info about the privacy policy of the website.
+            Redirects to the Privacy page in the Home folder.
+            </summary>
+            <returns>Rendered view to the response.</returns>
+        </member>
+        <member name="M:AlbumRating.Controllers.HomeController.Error">
+            <summary>
+            Alerts the user of any Errors.
+            Redirects to the Error page in the Shared folder.
+            </summary>
+            <returns>Rendered view to the response.</returns>
+        </member>
+        <member name="T:AlbumRating.Controllers.UserController">
+            <summary>
+            Responsible for handling all views in the User folder
+            </summary>
+        </member>
+        <member name="F:AlbumRating.Controllers.UserController.albumService">
+            <summary>
+            Allows communication with the <c>AlbumService class</c>
+            </summary>
+        </member>
+        <member name="F:AlbumRating.Controllers.UserController.genreService">
+            <summary>
+            Allows communication with the <c>GenreService class</c>
+            </summary>
+        </member>
+        <member name="F:AlbumRating.Controllers.UserController.userService">
+            <summary>
+            Allows communication with the <c>UserService class</c>
+            </summary>
+        </member>
+        <member name="M:AlbumRating.Controllers.UserController.#ctor(AlbumRating.Services.Contracts.IUserService,AlbumRating.Services.Contracts.IAlbumsService,AlbumRating.Services.Contracts.IGenreService)">
+            <summary>
+            Initializes a new instance of the UserController class.
+            Gets called by the StartUp class.
+            </summary>
+            <param name="userService">A required service for the class.</param>
+            <param name="albumService">A required service for the class.</param>
+            <param name="genreService">A required service for the class.</param>
+        </member>
+        <member name="M:AlbumRating.Controllers.UserController.Rate">
+            <summary>
+            Redirects to the Rate page in the User folder.
+            </summary>
+            <returns>Rendered view to the response.</returns>
+        </member>
+        <member name="M:AlbumRating.Controllers.UserController.Rate(System.Int32,System.Int32)">
+            <summary>
+            Allows a signed in User to Score an Album with a rating from 1 to 5.
+            The User must be signed in.
+            </summary>
+            <returns>Rendered view to the response.</returns>
+        </member>
+        <member name="M:AlbumRating.Controllers.UserController.AlbumAlreadyRated(System.String)">
+            <summary>
+            Notifies the User that they've already rated the Album the tried to rate.
+            </summary>
+            <returns>Rendered view to the response.</returns>
+        </member>
+        <member name="M:AlbumRating.Controllers.UserController.ViewAllRated">
+            <summary>
+            Displays all the Albums rated by the User.
+            </summary>
+            <returns>Rendered view to the response.</returns>
+        </member>
+    </members>
+</doc>
