@@ -31,16 +31,15 @@
         {
             var viewModel = new IndexAllRatedAlbumsGloballyViewModel();
             viewModel.Albums = this.albumService.GetAll();
+
             var rated = this.albumService.GetAllRatings();
 
             rated = rated.OrderBy(x => x.AlbumId).ToList(); // list with all albums that have ratings
             viewModel.Albums = viewModel.Albums.OrderBy(x => x.AlbumId).ToList(); // list with all albums in db
 
-
             foreach (var album in viewModel.Albums)
             {
-                var timesRated = 0;
-                foreach (var user in userService.GetAll())
+                foreach (var user in this.userService.GetAll())
                 {
                     var a = rated.FirstOrDefault(x => x.AlbumId == album.AlbumId && x.UserId == user.UserId);
                     if (a != null)
@@ -53,7 +52,6 @@
                         {
                             viewModel.AlbumsWithRating[a.Album] += a.Rating;
                         }
-                        timesRated++;
                     }
                 }
             }
@@ -65,7 +63,6 @@
                     viewModel.AlbumsWithRating.Add(album, 0);
                 }
             }
-
 
             return this.View(viewModel);
         }
@@ -82,9 +79,10 @@
         {
             if (this.albumService.CreateAlbum(title, artist, year, genreId) == 0)
             {
-                return (this.RedirectToAction("AlbumAlreadyAdded", new { error = $"Album {title} by {artist} is already in the database" }));
+                return this.RedirectToAction("AlbumAlreadyAdded", new { error = $"Album {title} by {artist} is already in the database" });
             }
-            return this.RedirectToAction("ListAll"); // change to redirect to some other page
+
+            return this.RedirectToAction("ListAll");
         }
 
         public IActionResult Delete()
@@ -101,7 +99,7 @@
             viewModel.Albums = this.albumService.GetAll();
 
             this.albumService.DeleteAlbum(albumId);
-            return this.RedirectToAction("ListAll"); // change to redirect to some other page
+            return this.RedirectToAction("ListAll"); 
         }
 
         public IActionResult AlbumAlreadyAdded(string error)
