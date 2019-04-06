@@ -34,11 +34,11 @@ namespace AlbumRating.Tests
             var optionsBuilder = new DbContextOptionsBuilder<AlbumRatingDbContext>();
             var mockContext = new Mock<AlbumRatingDbContext>(optionsBuilder.Options);
 
-            mockContext.Setup(x =>x.Genres).Returns(mockSet.Object); //Setting it up to return Genres
+            mockContext.Setup(x => x.Genres).Returns(mockSet.Object); //Setting it up to return Genres
 
             var service = new GenreService(mockContext.Object);
             var genres = service.GetAll();
-
+            
             Assert.AreEqual(3, genres.Count);
             Assert.AreEqual("Pop", genres[0].Name);
             Assert.AreEqual("Rock", genres[1].Name);

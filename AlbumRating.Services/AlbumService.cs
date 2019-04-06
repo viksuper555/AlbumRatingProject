@@ -16,7 +16,7 @@
             this.context = context;
         }
 
-        public int CreateAlbum(string title, string artist, int year, int genreId)
+        public int CreateAlbum(string title, string artist, int year, int genreId) // add to db
         {
             var album = new Album() { Title = title, Artist = artist, Year = year, GenreId = genreId, TimesRated = 0};
 
@@ -33,7 +33,7 @@
             return album.AlbumId;
         }
 
-        public int DeleteAlbum(int albumId)
+        public int DeleteAlbum(int albumId) // delete from db
         {
             var album = this.context.Albums.FirstOrDefault(x => x.AlbumId == albumId);
             this.context.Albums.Remove(album);
