@@ -9,7 +9,17 @@
 <hr />
 @foreach (var a in Model.AlbumsWithRating.OrderByDescending(x => x.Value))
 {
-    string print = $"{a.Key.Title} by {a.Key.Artist} | total rating {(double)a.Value/a.Key.TimesRated:F1} | Rated {a.Key.TimesRated} times";
+    string print = "";
+
+    if(a.Key.TimesRated > 0)
+    {
+        print = $"{a.Key.Title} by {a.Key.Artist} | Average rating {(double)a.Value/a.Key.TimesRated:F1} | Rated {a.Key.TimesRated} times";
+    }
+    else
+    {
+        print = $"{a.Key.Title} by {a.Key.Artist} | Average rating 0 | Rated {a.Key.TimesRated} times";
+
+    }
 
     <h4>@print</h4>
 
