@@ -23,6 +23,8 @@
 
         public string Title { get; set; }
 
+        public int TimesRated { get; set; }
+
         public ICollection<UserRatedAlbum> UserRatedAlbums { get; set; }
     }
 }

@@ -42,11 +42,13 @@ namespace AlbumRating.Services
 
             foreach (var ratedInDb in this.context.UserRatedAlbums)
             {
-                if(ratedInDb.AlbumId == ratedAlbum.AlbumId && ratedInDb.UserId == ratedAlbum.UserId)
+                if (ratedInDb.AlbumId == ratedAlbum.AlbumId && ratedInDb.UserId == ratedAlbum.UserId)
                 {
                     return 0;
                 }
             }
+
+            album.TimesRated += 1;
 
             this.context.UserRatedAlbums.Add(ratedAlbum);
             this.context.SaveChanges();

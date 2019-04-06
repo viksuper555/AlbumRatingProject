@@ -18,7 +18,7 @@
 
         public int CreateAlbum(string title, string artist, int year, int genreId)
         {
-            var album = new Album() { Title = title, Artist = artist, Year = year, GenreId = genreId };
+            var album = new Album() { Title = title, Artist = artist, Year = year, GenreId = genreId, TimesRated = 0};
 
             foreach (var albumInDb in this.context.Albums)
             {

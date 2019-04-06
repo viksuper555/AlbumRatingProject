@@ -29,6 +29,8 @@ namespace AlbumRating.Data.Migrations
 
                     b.Property<int>("GenreId");
 
+                    b.Property<int>("TimesRated");
+
                     b.Property<string>("Title");
 
                     b.Property<int>("Year");
