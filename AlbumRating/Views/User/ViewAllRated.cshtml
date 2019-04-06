@@ -6,7 +6,7 @@
 
 
 <h1>Your Rated Albums</h1>
-@foreach (var a in Model.RatedAlbums)
+@foreach (var a in Model.RatedAlbums.OrderByDescending(x => x.Rating))
 {
     string title = Model.Albums.Find(x => x.AlbumId == a.AlbumId).Title;
     string artist = Model.Albums.Find(x => x.AlbumId == a.AlbumId).Artist;
