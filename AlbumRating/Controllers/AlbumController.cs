@@ -99,7 +99,7 @@
             viewModel.Albums = this.albumService.GetAll();
 
             this.albumService.DeleteAlbum(albumId);
-            return this.RedirectToAction("ListAll"); 
+            return this.RedirectToAction("ListAll");
         }
 
         public IActionResult AlbumAlreadyAdded(string error)
@@ -108,5 +108,23 @@
             viewModel.Error = error;
             return this.View(viewModel);
         }
+
+        //[Route("Album/{id}")]
+        public IActionResult AlbumInfo(int albumId)
+        {
+            var viewModel = new IndexAlbumViewModel();
+
+            var a = albumService.GetAll().FirstOrDefault(x => x.AlbumId == albumId);
+
+            viewModel.Artist = a.Artist;
+            viewModel.GenreId = a.GenreId;
+            viewModel.Genre = genreService.GetAll().FirstOrDefault(x => x.Id == a.GenreId).Name;
+            viewModel.Title = a.Title;
+            viewModel.Year = a.Year;
+            viewModel.TimesRated = a.TimesRated;
+
+            return this.View(viewModel);
+        }
+
     }
 }

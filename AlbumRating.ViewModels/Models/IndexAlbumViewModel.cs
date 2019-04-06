@@ -15,5 +15,7 @@
         public int Year { get; set; }
 
         public string Artist { get; set; }
+
+        public int TimesRated { get; set; }
     }
 }
