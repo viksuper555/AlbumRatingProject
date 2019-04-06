@@ -4,13 +4,15 @@
     ViewData["Title"] = "View";
 }
 
+<h2>Your Rated Albums</h2>
 
-<h1>Your Rated Albums</h1>
+<hr />
+
 @foreach (var a in Model.RatedAlbums.OrderByDescending(x => x.Rating))
 {
-    string title = Model.Albums.Find(x => x.AlbumId == a.AlbumId).Title;
-    string artist = Model.Albums.Find(x => x.AlbumId == a.AlbumId).Artist;
-    string print = $"{title} by {artist} | rated: {a.Rating} / {Model.maxRating}";
+    var album = Model.Albums.Find(x => x.AlbumId == a.AlbumId);
+
+    string print = $"{album.Title} by {album.Artist} | rated: {a.Rating} / {Model.maxRating}";
 
     <h4>@print</h4>
 }

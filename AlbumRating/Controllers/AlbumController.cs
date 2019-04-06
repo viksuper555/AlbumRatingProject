@@ -56,8 +56,6 @@
                         timesRated++;
                     }
                 }
-
-                    //viewModel.AlbumsWithRating[a.Album] = a.Rating / timesRated;
             }
 
             foreach (var album in viewModel.Albums)

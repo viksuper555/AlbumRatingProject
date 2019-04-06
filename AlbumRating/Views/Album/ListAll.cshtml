@@ -3,10 +3,13 @@
 }
 
 @model AlbumRating.ViewModels.Models.IndexAllRatedAlbumsGloballyViewModel
-<h1>All Albums</h1>
+
+<h2>All Albums</h2>
+
+<hr />
 @foreach (var a in Model.AlbumsWithRating.OrderByDescending(x => x.Value))
 {
-    string print = $"{a.Key.Title} by {a.Key.Artist} | total rating {a.Value} | Rated {a.Key.TimesRated} times";
+    string print = $"{a.Key.Title} by {a.Key.Artist} | total rating {(double)a.Value/a.Key.TimesRated:F1} | Rated {a.Key.TimesRated} times";
 
     <h4>@print</h4>
 
