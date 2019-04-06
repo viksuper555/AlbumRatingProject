@@ -11,6 +11,6 @@ namespace AlbumRating.ViewModels.Models
     {
         public List<Album> Albums { get; set; }
 
-        public Dictionary<Album, List<int>> AlbumWithRating = new Dictionary<Album, List<int>>();
+        public Dictionary<Album, int> AlbumsWithRating = new Dictionary<Album, int>();
     }
 }

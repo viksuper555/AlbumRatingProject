@@ -37,12 +37,11 @@
                 <ul class="nav navbar-nav">
                     <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
 
-                    <li><a asp-area="" asp-controller="Album" asp-action="ListAll">All albums</a></li>
-                    <li><a asp-area="" asp-controller="User" asp-action="Rate">Rate Al</a></li>
-                    <li><a asp-area="" asp-controller="Album" asp-action="Create">Add Al</a></li>
-                    <li><a asp-area="" asp-controller="Album" asp-action="Delete">Del A</a></li>
-                    <li><a asp-area="" asp-controller="Genre" asp-action="Create">Add Gen</a></li>
-                    <li><a asp-area="" asp-controller="Album" asp-action="ViewAllRatedGlobally">Glob Rate</a></li>
+                    <li><a asp-area="" asp-controller="Album" asp-action="ListAll">View All albums</a></li>
+                    <li><a asp-area="" asp-controller="User" asp-action="Rate">Rate Album</a></li>
+                    <li><a asp-area="" asp-controller="Album" asp-action="Create">Add Album</a></li>
+                    <li><a asp-area="" asp-controller="Album" asp-action="Delete">Delete Album</a></li>
+                    <li><a asp-area="" asp-controller="Genre" asp-action="Create">Add Genre</a></li>
                 </ul>
 
                     @if (SignInManager.IsSignedIn(User))

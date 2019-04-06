@@ -2,10 +2,12 @@
     ViewData["Title"] = "ListAll";
 }
 
-@model AlbumRating.ViewModels.Models.IndexAllAlbumsViewModel
-    <h1>All Albums</h1>
-    @foreach (var a in Model.Albums)
-    {
-        <h4>@a.Title @a.Artist @a.Year</h4>
+@model AlbumRating.ViewModels.Models.IndexAllRatedAlbumsGloballyViewModel
+<h1>All Albums</h1>
+@foreach (var a in Model.AlbumsWithRating.OrderByDescending(x => x.Value))
+{
+    string print = $"{a.Key.Title} by {a.Key.Artist} | rated: {a.Value} | X times";
 
-    }
+    <h4>@print</h4>
+
+}

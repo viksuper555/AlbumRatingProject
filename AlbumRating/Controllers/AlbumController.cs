@@ -17,18 +17,59 @@
     {
         private IAlbumsService albumService;
         private IGenreService genreService;
+        private IUserService userService;
 
-        public AlbumController(IAlbumsService albumService, IGenreService genreService)
+
+        public AlbumController(IUserService userService, IAlbumsService albumService, IGenreService genreService)
         {
             this.albumService = albumService;
             this.genreService = genreService;
+            this.userService = userService;
         }
 
         [AllowAnonymous]
         public IActionResult ListAll()
         {
-            var viewModel = new IndexAllAlbumsViewModel();
+            var viewModel = new IndexAllRatedAlbumsGloballyViewModel();
             viewModel.Albums = this.albumService.GetAll();
+            var rated = this.albumService.GetAllRatings();
+
+            rated = rated.OrderBy(x => x.AlbumId).ToList(); // list with all albums that have ratings
+            viewModel.Albums = viewModel.Albums.OrderBy(x => x.AlbumId).ToList(); // list with all albums in db
+
+
+            foreach (var album in viewModel.Albums)
+            {
+                var timesRated = 0;
+                foreach (var user in userService.GetAll())
+                {
+                    var a = rated.FirstOrDefault(x => x.AlbumId == album.AlbumId && x.UserId == user.UserId);
+                    if (a != null)
+                    {
+                        if (!viewModel.AlbumsWithRating.Keys.Contains<Album>(a.Album))
+                        {
+                            viewModel.AlbumsWithRating.Add(a.Album, a.Rating);
+                        }
+                        else
+                        {
+                            viewModel.AlbumsWithRating[a.Album] += a.Rating;
+                        }
+                        timesRated++;
+                    }
+                }
+
+                    //viewModel.AlbumsWithRating[a.Album] = a.Rating / timesRated;
+            }
+
+            foreach (var album in viewModel.Albums)
+            {
+                if (!viewModel.AlbumsWithRating.Keys.Contains<Album>(album))
+                {
+                    viewModel.AlbumsWithRating.Add(album, 0);
+                }
+            }
+
+
             return this.View(viewModel);
         }
 
@@ -42,7 +83,7 @@
         [HttpPost]
         public IActionResult Create(string title, string artist, int year, int genreId)
         {
-            if(this.albumService.CreateAlbum(title, artist, year, genreId) == 0)
+            if (this.albumService.CreateAlbum(title, artist, year, genreId) == 0)
             {
                 return this.RedirectToAction("AlbumAlreadyAdded");
             }
@@ -69,28 +110,6 @@
         public IActionResult AlbumAlreadyAdded()
         {
             return this.View();
-        }
-
-        [AllowAnonymous]
-        public IActionResult ViewAllRatedGlobally()
-        {
-            var viewModel = new IndexAllRatedAlbumsGloballyViewModel();
-            viewModel.Albums = this.albumService.GetAll();
-            var ratings = this.albumService.GetAllRatings();
-            foreach (var userRatedAlbum in ratings)
-            {
-                if(viewModel.AlbumWithRating.Keys.Contains<Album>(userRatedAlbum.Album))
-                {
-                    viewModel.AlbumWithRating[userRatedAlbum.Album].Append(userRatedAlbum.Rating);
-                }
-                else
-                {
-                    List<int> list = new List<int>();
-                    list.Add(userRatedAlbum.Rating);
-                    viewModel.AlbumWithRating.Add(userRatedAlbum.Album, list);
-                }
-            }
-            return this.View(viewModel);
         }
     }
 }
