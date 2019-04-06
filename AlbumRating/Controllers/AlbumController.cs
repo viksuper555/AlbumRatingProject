@@ -12,13 +12,35 @@
     using Microsoft.AspNetCore.Identity;
     using Microsoft.AspNetCore.Mvc;
 
+    /// <summary>
+    /// Responsible for handling all views in the Album folder
+    /// </summary>
+
     [Authorize]
     public class AlbumController : Controller
     {
-        private IAlbumsService albumService;
-        private IGenreService genreService;
-        private IUserService userService;
+        /// <summary>
+        /// Allows communication with the <c>AlbumService class</c>
+        /// </summary>
+        private readonly IAlbumsService albumService;
 
+        /// <summary>
+        /// Allows communication with the <c>GenreService class</c>
+        /// </summary>
+        private readonly IGenreService genreService;
+
+        /// <summary>
+        /// Allows communication with the <c>UserService class</c>
+        /// </summary>
+        private readonly IUserService userService;
+
+        /// <summary>
+        /// Initializes a new instance of the AlbumController class.
+        /// Gets called by the StartUp class.
+        /// </summary>
+        /// <param name="userService">A required service for the class.</param>
+        /// <param name="albumService">A required service for the class.</param>
+        /// <param name="genreService">A required service for the class.</param>
         public AlbumController(IUserService userService, IAlbumsService albumService, IGenreService genreService)
         {
             this.albumService = albumService;
@@ -26,6 +48,11 @@
             this.userService = userService;
         }
 
+        /// <summary>
+        /// Lists information about all Albums in the database
+        /// Doesn't require the user to be logged in to be displayed
+        /// </summary>
+        /// <returns>Rendered view to the response.</returns>
         [AllowAnonymous]
         public IActionResult ListAll()
         {
@@ -67,6 +94,10 @@
             return this.View(viewModel);
         }
 
+        /// <summary>
+        /// Redirects to the Create page in the Album folder.
+        /// </summary>
+        /// <returns>Rendered view to the response.</returns>
         public IActionResult Create()
         {
             var viewModel = new CreateAlbumViewModel();
@@ -74,6 +105,11 @@
             return this.View(viewModel);
         }
 
+        /// <summary>
+        /// Allows a signed in User to add an Album to the database.
+        /// The User must be signed in.
+        /// </summary>
+        /// <returns>Rendered view to the response.</returns>
         [HttpPost]
         public IActionResult Create(string title, string artist, int year, int genreId)
         {
@@ -85,6 +121,10 @@
             return this.RedirectToAction("ListAll");
         }
 
+        /// <summary>
+        /// Redirects to the Delete page in the Album folder.
+        /// </summary>
+        /// <returns>Rendered view to the response.</returns>
         public IActionResult Delete()
         {
             var viewModel = new DeleteAlbumViewModel();
@@ -92,6 +132,11 @@
             return this.View(viewModel);
         }
 
+        /// <summary>
+        /// Allows a signed in User to delete an Album from the database.
+        /// The User must be signed in.
+        /// </summary>
+        /// <returns>Rendered view to the response.</returns>
         [HttpPost]
         public IActionResult Delete(int albumId)
         {
@@ -102,6 +147,10 @@
             return this.RedirectToAction("ListAll");
         }
 
+        /// <summary>
+        /// Notifies the User that the Album they tried to add to the database is already in it.
+        /// </summary>
+        /// <returns>Rendered view to the response.</returns>
         public IActionResult AlbumAlreadyAdded(string error)
         {
             var viewModel = new FailMessageViewModel();
@@ -109,6 +158,10 @@
             return this.View(viewModel);
         }
 
+        /// <summary>
+        /// Displays a page with detailed info about the Album the User has clicked on.
+        /// </summary>
+        /// <returns>Rendered view to the response.</returns>
         //[Route("Album/{id}")]
         public IActionResult AlbumInfo(int albumId)
         {

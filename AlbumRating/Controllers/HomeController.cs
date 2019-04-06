@@ -8,6 +8,11 @@
     using AlbumRating.Models;
     using Microsoft.AspNetCore.Mvc;
 
+    /// <summary>
+    /// Responsible for handling all views in the Home folder
+    /// </summary>
+    /// 
+
     public class HomeController : Controller
     {
         public IActionResult Index()
