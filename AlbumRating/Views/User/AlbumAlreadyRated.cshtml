@@ -1,7 +1,8 @@
-﻿
+﻿@model AlbumRating.ViewModels.Models.FailMessageViewModel
+
 @{
     ViewData["Title"] = "AlbumAlreadyRated";
 }
 
-<h2>You've already rated this album</h2>
+<h2>@Model.Error</h2>
 

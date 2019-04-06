@@ -5,6 +5,7 @@
     using System.Linq;
     using System.Threading.Tasks;
     using AlbumRating.Services.Contracts;
+    using AlbumRating.ViewModels.Models;
     using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Mvc;
 
@@ -28,15 +29,17 @@
         {
             if(this.service.CreateGenre(name) == 0)
             {
-                return this.RedirectToAction("GenreAlreadyAdded"); // redirect to "you've already rated this album"
+                return (this.RedirectToAction("GenreAlreadyAdded", new { error = $"Genre {name} is already in the database"}));
             }
 
             return this.RedirectToAction("ListAll", "Album");
         }
 
-        public IActionResult GenreAlreadyAdded()
+        public IActionResult GenreAlreadyAdded(string error)
         {
-            return this.View();
+            var viewModel = new FailMessageViewModel();
+            viewModel.Error = error;
+            return this.View(viewModel);
         }
     }
 }

@@ -11,5 +11,6 @@
     string title = Model.Albums.Find(x => x.AlbumId == a.AlbumId).Title;
     string artist = Model.Albums.Find(x => x.AlbumId == a.AlbumId).Artist;
     string print = $"{title} by {artist} | rated: {a.Rating} / {Model.maxRating}";
+
     <h4>@print</h4>
 }

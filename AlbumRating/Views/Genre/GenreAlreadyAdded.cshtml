@@ -1,7 +1,8 @@
-﻿
+﻿@model AlbumRating.ViewModels.Models.FailMessageViewModel
+
 @{
     ViewData["Title"] = "GenreAlreadyAdded";
 }
 
-<h2>This genre is already in the database</h2>
+<h2>@Model.Error</h2>
 

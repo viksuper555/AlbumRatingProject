@@ -41,16 +41,19 @@
 
             if (this.userService.RateAlbum(albumId, rating, currentUser.UserId) == 0)
             {
-                // take id and display info for it
-                return this.RedirectToAction("AlbumAlreadyRated"); // redirect to "you've already rated this album"
+                var alreadyRated = viewModel.Albums.FirstOrDefault(x => x.AlbumId == albumId);
+                return (this.RedirectToAction("AlbumAlreadyRated", new { error = $"You've already rated {alreadyRated.Title} by {alreadyRated.Artist}" }));
+
             }
 
             return this.RedirectToAction("ListAll", "Album");
         }
 
-        public IActionResult AlbumAlreadyRated()
+        public IActionResult AlbumAlreadyRated(string error)
         {
-            return this.View();
+            var viewModel = new FailMessageViewModel();
+            viewModel.Error = error;
+            return this.View(viewModel); ;
         }
 
         public IActionResult ViewAllRated()

@@ -85,7 +85,7 @@
         {
             if (this.albumService.CreateAlbum(title, artist, year, genreId) == 0)
             {
-                return this.RedirectToAction("AlbumAlreadyAdded");
+                return (this.RedirectToAction("AlbumAlreadyAdded", new { error = $"Album {title} by {artist} is already in the database" }));
             }
             return this.RedirectToAction("ListAll"); // change to redirect to some other page
         }
@@ -107,9 +107,11 @@
             return this.RedirectToAction("ListAll"); // change to redirect to some other page
         }
 
-        public IActionResult AlbumAlreadyAdded()
+        public IActionResult AlbumAlreadyAdded(string error)
         {
-            return this.View();
+            var viewModel = new FailMessageViewModel();
+            viewModel.Error = error;
+            return this.View(viewModel);
         }
     }
 }
