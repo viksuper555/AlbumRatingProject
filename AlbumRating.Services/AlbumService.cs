@@ -40,7 +40,7 @@
             this.context = context;
         }
 
-        public int CreateAlbum(string title, string artist, int year, int genreId) // add to db
+        public int CreateAlbum(string title, string artist, int year, int genreId) 
         {
             var album = new Album() { Title = title, Artist = artist, Year = year, GenreId = genreId, TimesRated = 0};
 
