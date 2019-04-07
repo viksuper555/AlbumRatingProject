@@ -8,6 +8,21 @@
     using AlbumRating.Data.Models;
     using AlbumRating.Services.Contracts;
 
+    /// <summary>
+    /// GenresService is a class that inherits the IGenreService interface.
+    /// Contains methods to manipulate and get data from the Genres table in the database.
+    /// <list type="bullet">
+    /// <item>
+    /// <term>CreateGenre</term>
+    /// <description>The CreateGenre method adds a new genre to the database with the given parameters.</description>
+    /// </item>
+    /// <item>
+    /// <term>GetAll</term>
+    /// <description>The GetAll method returns all Genres from the database.</description>
+    /// </item>
+    /// </list>
+    /// </summary>
+    /// 
     public class GenreService : IGenreService
     {
         private AlbumRatingDbContext context;

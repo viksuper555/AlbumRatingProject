@@ -57,7 +57,7 @@
             return album.AlbumId;
         }
 
-        public int DeleteAlbum(int albumId) // delete from db
+        public int DeleteAlbum(int albumId)
         {
             var album = this.context.Albums.FirstOrDefault(x => x.AlbumId == albumId);
             this.context.Albums.Remove(album);

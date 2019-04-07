@@ -8,6 +8,31 @@ using System.Text;
 
 namespace AlbumRating.Services
 {
+
+    /// <summary>
+    /// UserService is a class that inherits the IUserService interface.
+    /// Contains methods to manipulate and get data from the Users table in the database.
+    /// <list type="bullet">
+    /// <item>
+    /// <term>GetAll</term>
+    /// <description>The GetAll method returns all Users from the database.</description>
+    /// </item>
+    /// <item>
+    /// <term>GetUserByName</term>
+    /// <description>The GetUserByName method returns the User from the database with the given name.</description>
+    /// </item>
+    /// <item>
+    /// <term>GetAllRated</term>
+    /// <description>The GetAllRated method returns all UserRatedAlbum rows containing the given UserId.</description>
+    /// </item>
+    /// <item>
+    /// <term>RateAlbum</term>
+    /// <description>The RateAlbum method adds a Rating, by a given user to a given album, to the database.</description>
+    /// </item>
+    /// </list>
+    /// </summary>
+    /// 
+
     public class UserService : IUserService
     {
         private AlbumRatingDbContext context;

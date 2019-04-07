@@ -247,3 +247,4 @@ C:\Users\viksu\Desktop\AlbumRatingProject\AlbumRating\obj\Debug\netcoreapp2.1\Ra
 C:\Programming\it-career\course-project\AlbumRatingProject\AlbumRating\obj\Debug\netcoreapp2.1\Razor\Views\Album\AlbumInfo.g.cshtml.cs
 C:\Users\viksu\Desktop\AlbumRatingProject\AlbumRating\obj\Debug\netcoreapp2.1\Razor\Views\Album\AlbumInfo.g.cshtml.cs
 C:\Programming\it-career\course-project\AlbumRatingProject\AlbumRating\bin\Debug\netcoreapp2.1\AlbumRating.xml
+C:\Users\viksu\Desktop\AlbumRatingProject\AlbumRating\bin\Debug\netcoreapp2.1\AlbumRating.xml
